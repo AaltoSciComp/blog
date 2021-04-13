@@ -14,10 +14,13 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+blog_title = "Aalto Scientific Computing Blog"
 blog_baseurl = 'https://aaltoscicomp.github.io/blog/'
+#blog_path = '.'
 blog_feed_fulltext = True
 post_date_format = '%Y %b %d'
 blog_feed_length = 50
+post_auto_excerpt = 1000 # number of paragraphs in excerpt, overrideable.
 html_sidebars = {
    '**': [#'postcard.html',
           'recentposts.html',
