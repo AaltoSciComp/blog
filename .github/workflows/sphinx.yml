@@ -1,0 +1,25 @@
+name: gh-pages
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  [push, pull_request]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Dependencies
+        run: pip install -r requirements.txt
+      - name: Build
+        run: |
+          make dirhtml
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/dirhtml/
