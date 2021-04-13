@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://aaltoscicomp.github.io/blog/</id>
-  <title>Blog</title>
-  <updated>2021-04-13T19:50:53.955277+00:00</updated>
+  <title>Aalto Scientific Computing Blog</title>
+  <updated>2021-04-13T20:20:34.611562+00:00</updated>
   <link href="https://aaltoscicomp.github.io/blog/"/>
   <link href="https://aaltoscicomp.github.io/blog/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
@@ -20,7 +20,7 @@
 &lt;/div&gt;
 </content>
     <link href="https://aaltoscicomp.github.io/blog/2021/04/hello-world/" rel="alternate"/>
-    <summary>Hello, world!</summary>
+    <summary>Hello, world!Test ASC blog.</summary>
     <published>2021-04-13T00:00:00+00:00</published>
   </entry>
 </feed>
