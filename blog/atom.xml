@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://aaltoscicomp.github.io/blog/</id>
   <title>Aalto Scientific Computing Blog</title>
-  <updated>2021-04-14T12:20:52.271197+00:00</updated>
+  <updated>2021-04-14T12:44:45.171558+00:00</updated>
   <link href="https://aaltoscicomp.github.io/blog/"/>
   <link href="https://aaltoscicomp.github.io/blog/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>

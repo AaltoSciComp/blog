@@ -7,5 +7,7 @@ Aalto Scientific Computing Blog
 ]
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
+
+.. postlist:: 50
