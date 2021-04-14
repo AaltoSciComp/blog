@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Posts by Marijn van Vliet &mdash; Aalto Scientific Computing Blog  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="Posts by Marijn van Vliet"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../" class="icon icon-home"> Aalto Scientific Computing Blog
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Aalto Scientific Computing Blog</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Posts by Marijn van Vliet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+<div class="section">
+  <h1>
+     Posts by  Marijn van Vliet 
+  </h1>
+   
+
+  <div class="section">
+    <h2>
+      <a href="../../../2021/04/what-code-has-to-teach-us-1/"
+        >What code has to teach us #1: the impact of implicit behavior</a
+      >
+    </h2>
+
+    <ul class="ablog-archive">
+      <li>
+          2021 Apr 14 
+      </li>
+       
+<li id="author">
+  <span
+    >Author:</span
+  >
+   
+  <a href="#">Marijn van Vliet</a>  
+</li>
+   
+<li id="category">
+  <span
+    >Category:</span
+  >
+   
+  <a href="../../category/python/">python</a>  
+</li>
+  
+    </ul>
+    <p>As Research Software Engineers (RSEs), we read and write a lot of code.
+In this series of blog posts, we are going to share some snippets that taught us important lessons, and thereby impart that wisdom unto you.
+These snippets are taken from actual research code, responsible for producing results that end up in peer-reviewed scientific articles.
+That is to say, results that we should have some confidence in to be correct.
+However, problems have a way of cropping up in the most unexpected places and when they do, there is a chance to learn from them.</p>
+<p>I was in the metro zooming through Lauttasaari when I received an email from my professor that made my heart skip a beat.
+We just submitted a paper to Nature Communications and were all still a little giddy about finally sending off the project we had been working on for 3 years.
+She and the first author had been chatting about the cool methods we had been using for the project and a question arose: were we 100% certain that we “removed copies of the selected stimuli from the train set”?
+If we hadn’t, we would have to quickly pull back our submission, but surely we had, right?
+I thought we did.
+At least, I distinctly remember writing the code to do it.
+Just to be on the safe side, I decided to double check the code.</p>
+<p>Below is the analysis script in question.
+It reads some data, performs some preprocessing, feeds into the a machine learning algorithm called <code class="docutils literal notranslate"><span class="pre">zero_shot_decoding</span></code>, and stores the output.
+I present it here to you in full, because there are many subtleties working together that make this situation so scary.
+The question I pose to you, dear reader, is this: were the highlighted lines (118–120) executed, or did we have to pull our submission?</p>
+<p>The first thing that went through my head, as it probably went through yours, was: this code is so long and complicated, answering this seemingly simple question is going to take some time to figure out.
+And I won’t blame you for giving up right then and there.
+Hunched over my laptop while the metro passed through Ruoholahti, I tried to trace the logic of the script.</p>
+<p>First problem: much of the behavior of the script is dictated by the command line arguments.
+Luckily, their values are saved in the output file, so I could check that they were correct.</p>
+<p><strong>Lesson:</strong> always error on the side of caution when deciding whether it is worth storing something in the result file.</p>
+<p>That brings us to the big <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement.
+Did the correct branch execute?
+Well, that depends on what was in the <code class="docutils literal notranslate"><span class="pre">m</span></code> dictionary, which translates to what variables were defined in the MATLAB file used as input to the script.
+If we had used the wrong variable name, i.e. <code class="docutils literal notranslate"><span class="pre">brainVecsReps</span></code> instead of <code class="docutils literal notranslate"><span class="pre">brainVecs</span></code>, when creating the input file, the wrong branch would have executed and the script would have been happily computing the wrong thing.
+And we would never know.
+If we had used the wrong input file, or the wrong version of the input file, the wrong branch would have executed without any indication that something was wrong.
+So many opportunities for small mistakes to lead to a big error.</p>
+<p><strong>Lesson:</strong> have the user be explicit in what they want to do, so the script can check the user’s intent against the inputs and raise a nice big error if they screwed up.
+In this case, there should really have been either a command line parameter determining which branch to execute, or even better, this should have been four separate scripts.</p>
+<p>In the end I ended up searching the logfile for the line <code class="docutils literal notranslate"><span class="pre">Stability</span> <span class="pre">selection</span> <span class="pre">DISABLED,</span> <span class="pre">single-trial</span> <span class="pre">data</span></code> which, thankfully, was there, so the correct branch did execute.</p>
+<p><strong>Lesson:</strong> be liberal with <code class="docutils literal notranslate"><span class="pre">print</span></code>-statements (or other logging directives) in your scripts; cherish the resulting logfiles.</p>
+<p>I breathed a sigh of relieved as the metro pulled into the central railway station.</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement is a work of insanity.
+What was I thinking determining what the script should be doing based on a mostly random naming scheme of some variables in a MATLAB file?
+I got lucky that time.
+But from that moment on, I would heed this lesson:</p>
+
+    <p><a href="../../../2021/04/what-code-has-to-teach-us-1/">Read more ...</a></p>
+    <hr />
+  </div>
+   
+</div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Aalto Scientific Computing.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
