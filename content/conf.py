@@ -22,10 +22,10 @@ post_date_format = '%Y %b %d'
 blog_feed_length = 50
 post_auto_excerpt = 1000 # number of paragraphs in excerpt, overrideable.
 html_sidebars = {
-   '**': [#'postcard.html',
+   '**': ['postcard.html',
           'recentposts.html',
-          #'tagcloud.html',
-          #'categories.html',
+          'tagcloud.html',
+          'categories.html',
           'archives.html', ]
 }
 
