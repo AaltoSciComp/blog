@@ -7,7 +7,7 @@ fi
 
 base=$(dirname $0)
 slug="$1"
-output="content/$base/$(date +%Y/%m)/$slug.rst"
+output="content/$base/$(date +%Y)/$slug.rst"
 
 
 mkdir -p $(dirname "$output")
