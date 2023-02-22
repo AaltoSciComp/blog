@@ -11,3 +11,4 @@ Aalto Scientific Computing Blog
    :caption: Contents:
 
 .. postlist:: 50
+   :date: %Y %B %d
