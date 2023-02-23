@@ -12,7 +12,7 @@ We have stickers (and patches!) to support Aalto Scientific Computing.
 invest in this?  Well, it's fun, but there should be a deeper reason.
 
 .. figure:: stickers-and-patches.jpg
-   :alt: Picture with hexagonal stickers and patches laid out on a table.
+   :alt: Picture with hexagonal stickers and patches laid out on a table.  We have far more than you see here.
 
    Stickers and patches, pick up from either the Physics, Neuroscience
    and Biomedical Engineering, or Computer Science departments.
