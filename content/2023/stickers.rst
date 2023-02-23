@@ -32,7 +32,8 @@ We also have patches, for those who are interested - in Finland they
 are a big thing on [student
 overalls](https://en.wikipedia.org/wiki/Student_boilersuit), but you
 could also sew them on your backpack or purse. Please send us pictures to 
-inspire us all!
+inspire us all! (some have Velcro backing for that kind)
+of attachment, ask us for that style.
 
 
 
