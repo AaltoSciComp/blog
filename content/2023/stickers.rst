@@ -15,24 +15,24 @@ invest in this?  Well, it's fun, but there should be a deeper reason.
    :alt: Picture with hexagonal stickers and patches laid out on a table.
 
    Stickers and patches, pick up from either the Physics, Neuroscience
-   and Biomedical Engineering, or Computer Science.
+   and Biomedical Engineering, or Computer Science departments.
 
-It's our goal to make not just provide a computer cluster, courses,
-and support.  That's great, but we can't scale to solve all problems:
-the only way we can provide the environment that we want is if the
-whole community can work together.  Thus, our new promotional material
-is designed so that the community can show it's support of scientific
-computing at Aalto University.  We hope that by providing a way for
-the community to show this interest, people can find - and support -
-each other better.
+While our main goal is to maintain Aalto University Triton HPC cluster, 
+provide courses and direct support to researchers, we cannot scale to 
+solve all problems and make the best decisions without a community: you! 
+Thus, our new promotional material is designed so that the members of our 
+community can show their support for scientific computing at Aalto 
+University.  We hope that by providing a way for the community to show 
+this interest, people can find - and support - each other better.
 
-We have the typical stickers, which you can use on all the typical
+We have the typical hexagonal stickers, which you can use on all the typical
 sticker things.
 
 We also have patches, for those who are interested - in Finland they
 are a big thing on [student
-overalls](https://en.wikipedia.org/wiki/Student_boilersuit), though
-maybe they aren't the biggest thing anymore for our main audience.
+overalls](https://en.wikipedia.org/wiki/Student_boilersuit), but you
+could also sew them on your backpack or purse. Please send us pictures to 
+inspire us all!
 
 
 
