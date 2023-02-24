@@ -1,10 +1,8 @@
 Aalto Scientific Computing Blog
 ===============================
 
-[ `Aalto Scientific Computing home <https://scicomp.aalto.fi/>`__
-`feed <blog/atom.xml>`__
-`Twitter <https://twitter.com/SciCompAalto>`__
-]
+We don't exactly blog much, but this is sometimes used for stories
+that don't fit other places.
 
 .. toctree::
    :maxdepth: 2

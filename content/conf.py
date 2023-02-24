@@ -22,7 +22,8 @@ post_date_format = '%Y %b %d'
 blog_feed_length = 50
 post_auto_excerpt = 1000 # number of paragraphs in excerpt, overrideable.
 html_sidebars = {
-   '**': ['postcard.html',
+   '**': ['asc.html',
+          'postcard.html',
           'recentposts.html',
           'tagcloud.html',
           'categories.html',
@@ -51,7 +52,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-#templates_path = ['_templates']
+templates_path = ['../_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
