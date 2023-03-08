@@ -10,14 +10,17 @@ ASC development day, 2023 March
 We recently had an internal "development day", which is a our new name
 for getting together to talk about longer term plans.  This is our
 second "development day".  Overall, it went well, and we think that we
-are on an overall  good path.  There are three particulal focus areas
+are on an overall  good path.  There are three particular focus areas
 for the future:
 
 1. **Teaching:** This was also a focus last time, and probably will
    still be in the future.  We are overall happy with our decision
    last time to focus less on many small/medium courses, and instead
    focus on large, collaborative courses and then focused,
-   individualized support for advanced use cases.
+   individualized support for advanced use cases.  Smaller courses
+   happen mainly when we see specific needs that can't be filled other
+   ways (or we make them large, open, collaborative courses if there
+   is a broad need).
 
 2. **Triton v3:** The software/OS/management side of our cluster will
    be almost completely reworked in the next year (we aren't getting
@@ -42,41 +45,53 @@ still needed, but the focus seems to be changing.  No longer is a room
 with 10-20 (or ever 50) people considered a lot.  People seem both
 more able and willing to find advanced material themselves, and more
 in need of basic principles (git, Python for SciComp, etc).  Perhaps
-this is also partly caused by remote work emphasizing how all this
-material is available online anyway.  Our basic philosophy:
+this is also partly caused by the remote work period emphasizing how
+all this material is available online anyway.  Our basic philosophy:
 
-* **Focus on large courses**, for example using the `CodeRefinery MOOC
-  strategy
+* **Focus on large courses for new researchers**, for example using
+  the `CodeRefinery MOOC strategy
   <https://coderefinery.github.io/manuals/coderefinery-mooc/>`__.
-  This reaches the most people, helps the beginners the most, and
+  This reaches the most people, helps the beginners the most,
   produces high-quality open source material for asynchronous
-  reference.  Example include `CodeRefinery
+  reference, and has good possibilities for co-teaching.
+  Example include `CodeRefinery
   <https://coderefinery.org>`__, our `SciComp/HPC kickstart course
   <https://scicomp.aalto.fi/training/scip/kickstart-2022-summer/>`__,
   and `Python for Scientific Computing
   <https://aaltoscicomp.github.io/python-for-scicomp/>`__.
 
-* **Advanced, one-on-one or small-group support** via `SciComp garage
+* **Advanced, one-on-one, or small-group support** via `SciComp garage
   <https://scicomp.aalto.fi/help/garage/>`__ and the `Research
   Software Engineering service <https://scicomp.aalto.fi/rse/>`__.
-  This isn't just for projects, but is an integral service for people
-  referring to other advanced material on their own time.  One-on-one
-  support is both more rewarding for us and probably more useful to
-  the user (relative to time put in).  Anyway, advanced courses often
-  aren't offered right when people need them, so we are left in this
-  position anyway.
+  This isn't just for projects, but is also a useful service for
+  people learning from other advanced material in their work -
+  basically, we work as mentors.  One-on-one support is both more
+  rewarding for us and probably more useful to the user (relative to
+  time demands on both ends).  Anyway, advanced courses often aren't
+  offered right when people need them, so we are left in this position
+  anyway.
 
-* Continue the possibility of **on-demand courses** if someone
-  requests them.
+* **What about small/medium-sized courses, and advanced courses?**
 
-* The first two points above squeeze out medium-sized courses for the
-  most part, in our opinion.  We'll still offer medium-sized courses
-  when we see a need - if you want to request one, let us know!
+  * The first two points above squeeze out medium-sized courses for
+    the most part, in our opinion.  By the time our audience is an
+    intermediate or advanced level, they seem to be able to figure
+    things out themselves + ask for help when needed - if they can
+    figure out what they need to do.  This point deserves further
+    study, though.  Instead, we point to other existing material.
 
-We will make sure that we have good recommendations for advanced
-self-study courses and generally chart out the resources so that our
-users don't have to.  This is mostly done by our `Hands-on Scientific
-Computing <https://hands-on.coderefinery.org>`__ course.
+  * We will make sure that we have good recommendations for advanced
+    self-study courses and generally chart out the resources so that our
+    users don't have to.  This is mostly done by our `Hands-on Scientific
+    Computing <https://hands-on.coderefinery.org>`__ course.
+
+  * In the past, we have supported community members to give courses on
+    topics of which they are experts.  Continue this as appropriate (see
+    the next point).
+
+  * Continue the possibility of **on-demand courses** taught by us if
+    someone requests them, and other smaller courses if we see a strong
+    need.  Contact us!
 
 
 
