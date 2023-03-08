@@ -98,8 +98,8 @@ increased responsiveness to software installation requests.
 LUMI
 ----
 
-As said above, LUMI is a significant resource, yet no one has ever
-come to use asking for help using it.  Over the past six months, we
+As said above, Lumi is a significant resource, yet our users have not
+come to us asking for our help in using it. Over the past six months, we
 have found some Triton users who would benefit from it and helped
 extend their workflows to work on LUMI.  We do this by first testing
 some applications ourselves, then looking at Triton usage for large
@@ -114,5 +114,5 @@ While LUMI is a HPC system and has a typical HPC system interface, it
 serves so many different users that the software stack is very
 limited, so that most users need to install their own software and
 figure out how to run it on AMD GPUs.  This is why we recommend most users
-access LUMI through us (we're paid to save you time, after al), though
+access LUMI through us (we're paid to save you time, after all), though
 of course anyone interested can use it directly.
