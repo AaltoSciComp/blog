@@ -68,8 +68,8 @@ schedule.  This usually happens the first full workweek:
 
 
 
-This years scheduling conflict
-------------------------------
+This year's scheduling conflict
+-------------------------------
 
 We are aware that there is a scheduling conflict with the CS summer day
 which is scheduled on the Tuesday of the 2023 HPC kickstart course.
