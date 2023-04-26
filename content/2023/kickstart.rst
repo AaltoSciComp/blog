@@ -1,5 +1,5 @@
 :blogpost: true
-:date: 2023-04-16
+:date: 2023-04-26
 :author: Richard Darst
 :category:
 
@@ -15,6 +15,11 @@ The full name is "Introduction to scientific computing and HPC"
 and was taught without the first day, thus the short name "kickstart"
 we still use.  Some years day 1 had a different name, but was still
 taught together with days 2-3 as a package.
+
+Our goal isn't just to teach some skills, but to form a community
+around scientific computing - with researchers who have a common
+language to work together and help each other, supported by Aalto
+Scientific Computing in the background.
 
 
 
@@ -33,7 +38,6 @@ or re-invent.
 **Days 2 and 3 are about high-performance computing, more precisely
 basic cluster usage** (with a focus of the basics).  This is focused
 on the kinds of tools our community usually uses.
-
 
 The topics are refined after many years of both teaching and support
 of junior researchers.  Because of the way academic careers work (much
@@ -67,16 +71,31 @@ schedule.  This usually happens the first full workweek:
 This years scheduling conflict
 ------------------------------
 
-We are aware that there is a scheduling conflict with the CS summer day 
-which is scheduled on the Tuesday of the HPC kickstart course. There are
-recordings of previous years available on youtube https://www.youtube.com/@aaltoscientificcomputing3454
-and you can still join us for day 2 and 3 even if you did not join day 1. However,
-if you want help in setting up the connection to triton beyond our online material,
-we strongly recommend to join us at 15:00 on day one, when we will provide a 
-help session for this task. 
+We are aware that there is a scheduling conflict with the CS summer day
+which is scheduled on the Tuesday of the 2023 HPC kickstart course.
+We did contact every department in January/February, yet this was
+still a surprise to us.  In past years, we have adjusted our schedule
+to similar events, but this is not possible this year despite our best
+efforts.
+
+We will still try to support researchers as much as possible.
+
+`Recordings of previous years are available on youtube
+<https://www.youtube.com/@aaltoscientificcomputing3454>`__, and we
+also release videos the same evening as the course precisely to
+support everyone regardless of these conflicts.
+Researchers can still join us for day 2 and 3 even if you did not join
+day 1. However, please pay particular care to the instructions about
+setting up the Triton connection in advance.
+
+
+
+Future
+------
 
 We hope that this blog post can explain our goals to a larger audience
-so that we can reach even more people in the future, and avoid these
-types of scheduling conflicts.  You can reach us at scip@aalto.fi, and
-each spring we reach out to the main departments we know use our
-services.
+so that we can reach even more people in the future, so that we can
+expand to onboarding even more young researchers even more
+systematically.  You can reach us at scip@aalto.fi, and
+each spring we reach out to the main departments to schedule each
+summer's course.
