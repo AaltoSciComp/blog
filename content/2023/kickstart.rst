@@ -21,6 +21,8 @@ around scientific computing - with researchers who have a common
 language to work together and help each other, supported by Aalto
 Scientific Computing in the background.
 
+`Course page in 2023 <https://scicomp.aalto.fi/training/scip/kickstart-2023/>`__.
+
 
 
 Topics of SciComp Kickstart
