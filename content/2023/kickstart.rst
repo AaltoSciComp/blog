@@ -81,7 +81,6 @@ to similar events, but this is not possible this year despite our best
 efforts.
 
 We will still try to support researchers as much as possible.
-
 `Recordings of previous years are available on youtube
 <https://www.youtube.com/@aaltoscientificcomputing3454>`__, and we
 also release videos the same evening as the course precisely to
