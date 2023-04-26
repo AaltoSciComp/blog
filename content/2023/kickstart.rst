@@ -64,19 +64,16 @@ schedule.  This usually happens the first full workweek:
 
 
 
-Future
-------
+This years scheduling conflict
+------------------------------
 
-In the past, we have tried to coordinate with the department HRs to
-avoid any other events, and have been mostly successful.  In 2023, we
-tried extra hard to do this coordination early and thought we were
-successful.  Unfortunately, the CS department scheduled the summer
-event on Tuesday of the week we have planned.  There have been similar
-things in the past and we have adjusted our schedule, but
-unfortunately this year, with everyone else coordinated, we have no
-option to do that.  **This places CS researchers in an unfortunate
-position of choosing between skill and networking for career
-development**.
+We are aware that there is a scheduling conflict with the CS summer day 
+which is scheduled on the Tuesday of the HPC kickstart course. There are
+recordings of previous years available on youtube https://www.youtube.com/@aaltoscientificcomputing3454
+and you can still join us for day 2 and 3 even if you did not join day 1. However,
+if you want help in setting up the connection to triton beyond our online material,
+we strongly recommend to join us at 15:00 on day one, when we will provide a 
+help session for this task. 
 
 We hope that this blog post can explain our goals to a larger audience
 so that we can reach even more people in the future, and avoid these
