@@ -1,0 +1,80 @@
+:blogpost: true
+:date: 2023-04-27
+:author: Richard Darst
+:category: triton
+
+
+Preparing for new Triton
+========================
+
+Sometime after summer 2023 (e.g. late August), we will do a major
+update of Triton: updating the basic operating system, and thus almost
+everything else.  There are big benefits to this: newer basic
+operating system software, but also such a basic update affects almost
+every user.  **For a short time, this will make a lot of work for almost
+every user.  This post gives advance warning and a chance of feedback
+of how to make the update most usable.**
+
+What will happen
+----------------
+
+We will update the basic operating system from CentOS 7 to something
+else (Rocky 8 or Rocky 9).  We've ordered all new management hardware
+to make the backend more reliable and manageable.  Along with this
+comes with an update of the software build system, which should allow
+us to deploy software to our users even better.  We'll also update our
+configuration management system for more reproducibility.
+
+We also hope to think about the usability of the new system: remove a
+lot of old options and add in new, simpler ways of doing what people
+need.
+
+All data and storage will remain the same, so there **is no big data
+migration needed.**
+
+The old and new clusters will be accessible at the same time (two
+different login nodes), with the same filesystems mounted (same data
+available) and some compute resources still available there, so that
+people can slowly migrate.  But the old one won't stay running too
+long, to avoid long maintenance effort or splitting of the resources.
+
+
+
+Reproduciblity
+--------------
+
+The biggest problem with big cluster updates like this is
+**reproducibility**: does you work from a month ago still work in one
+month?  If not, this is a big problem.  It's even worse if there is a
+much longer gap before you come back to it (paper revisions, anyone?).
+
+You could say there are two main categories:
+
+- **Specific software/code that needs to be compiled and installed:**
+  There may be small updates needed, but good-enough software needs
+  updating to run on multiple operating systems anyway.
+
+- **Whole workflows:** you need to make all the pieces work together.
+  Of which a lot of it relates to the first point, but still it gets
+  worse once everything goes together.
+
+What you can do:
+
+- Manage any messes you have earlier rather than later.  It's better
+  if you slowly clean up over time, so you can focus on the
+  differences once the change happens.
+
+- `Tests for your software
+  <https://coderefinery.github.io/testing/>`__.  Some way to validate
+  that it works correctly.
+
+- Contact `Aalto RSE <https://scicomp.aalto.fi/rse/>`__ for hands-on
+  help supporting the transition.  Come to the `garage
+  <https://scicomp.aalto.fi/help/garage/>`__ early and often.
+
+
+
+Feedback
+--------
+
+Discuss with us in `our chat <https://scicomp.zulip.cs.aalto.fi/#narrow/stream/6-triton/topic/feedback.on.new.Triton>`__.
