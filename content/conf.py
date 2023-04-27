@@ -50,6 +50,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_aaltoscicomp_branding',
+    'sphinxext.opengraph',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -73,3 +74,10 @@ html_theme = 'alabaster'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 #html_static_path = ['_static']
+
+
+ogp_site_url = "https://aaltoscicomp.github.io/blog/"
+ogp_site_name = "Aalto SciComp Blog"
+ogp_image = "https://scicomp.aalto.fi/_static/asc-socialshare-02.png"
+ogp_image_alt = "ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training."
+ogp_custom_meta_tags = ['<meta property="twitter:creator" content="@SciCompAalto" />']
