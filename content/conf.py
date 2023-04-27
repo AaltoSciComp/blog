@@ -23,11 +23,11 @@ blog_feed_length = 50
 post_auto_excerpt = 1000 # number of paragraphs in excerpt, overrideable.
 html_sidebars = {
    '**': ['asc.html',
-          'postcard.html',
-          'recentposts.html',
-          'tagcloud.html',
-          'categories.html',
-          'archives.html', ]
+          'ablog/postcard.html',
+          'ablog/recentposts.html',
+          'ablog/tagcloud.html',
+          'ablog/categories.html',
+          'ablog/archives.html', ]
 }
 
 
