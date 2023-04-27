@@ -49,6 +49,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_rtd_theme',
     'sphinx_rtd_theme_ext_color_contrast',
+    'sphinx_aaltoscicomp_branding',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
