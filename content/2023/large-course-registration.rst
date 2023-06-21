@@ -7,10 +7,19 @@
 How we do large course registration
 ===================================
 
-It's recently been asked how we do registration for large courses, so
-this explains it.  This is in particular about our large MOOC-like
-livestreamed courses, where we accept registrations from anywhere in
-the world.
+It's recently been asked how we (Aalto Scientific Computing) do
+registration for large courses, so this explains it.  This is in
+particular about our large MOOC-like livestreamed courses, where we
+accept registrations from anywhere in the world.  This isn't quite
+what `CodeRefinery <https://coderefinery.org/>`__ does, but there are
+some similarities (CodeRefinery is more ambitious).
+
+There is a basic trade-off of "many people registering, high no-show rate,
+low interaction" and "low no-show rate, but fewer people registering, users
+very motivated".  It would be nice to not have to choose between these
+two options... let's get back to this.
+
+
 
 Basic registration
 ------------------
@@ -48,12 +57,14 @@ extra registration form or field based on this: you get a different
 version of the email including these if your info (affiliation)
 matches the target audiences:
 
-* **Collaborative notes**: this is our core way of interaction.  Our
-  anti-troll strategy is to not give the notes document publicly, but
-  only for (a) anyone registering or (b) anyone registering from a
-  partner.  The live notes are not linked on the course website or
-  provided on the stream (though sometimes they get leaked, or we
-  straight up provide on the livestream chat).
+* **Collaborative notes** (`info
+  <https://coderefinery.github.io/manuals/coderefinery-mooc/>`__):
+  this is our core way of interaction.  Our anti-troll strategy is to
+  not give the notes document publicly, but only for (a) anyone
+  registering or (b) anyone registering from a partner.  The live
+  notes are not linked on the course website or provided on the stream
+  (though sometimes they get leaked, or we straight up provide on the
+  livestream chat).
 
   People who do *not* have access to the notes can still see them when
   they are shared on the livestream.  They also have access to the
@@ -104,8 +115,10 @@ What else could be done
 These take more work from us and active advance preparation on the
 part of the participants, thus are not as scaleable.
 
-* **Teams (organized)**: What we *don't* do in our courses is teams in
-  the way that CodeRefinery accomplished in 2020-2021 (which involves
+* **Teams (organized)** (`info
+  <https://coderefinery.github.io/manuals/coderefinery-mooc/>`__):
+  What we *don't* do in our courses is teams in the way that
+  CodeRefinery accomplished in 2020-2021 (which involves
   custom-creating small groups of people with a trained team leader).
   This worked very well when it worked, but is usually beyond the
   amount of coordination time we have for our (Aalto) courses.
@@ -129,6 +142,17 @@ part of the participants, thus are not as scaleable.
 These *could* be scaled by getting other partners to handle the teams
 for their own communities, probably in conjunction with their local
 Zoom/In-person/etc.
+
+
+
+How to balance high attendance with low no-show rate?
+-----------------------------------------------------
+
+If it's not clear yet, by having these different categories of
+registrations, one can keep a course open for all but hopefully narrow
+down to a highly interactive group of those people who want high
+interaction.  This is all part of the `CodeRefinery MOOC strategy
+<https://coderefinery.github.io/manuals/coderefinery-mooc/>`__.
 
 
 
