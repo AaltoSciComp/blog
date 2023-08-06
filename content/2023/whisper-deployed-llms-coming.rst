@@ -130,7 +130,9 @@ local models is not always trivial. Since GPU execution of diarization
 uses several models at once, there doesn't seem to be a simple way to
 have it use local models at all without changing the code. It also
 required some sleuthing to find where exactly the models are
-downloaded.
+downloaded.  If a code uses Hugging Face, `these environment variables
+<https://huggingface.co/docs/huggingface_hub/main/en/package_reference/environment_variables>`__
+can be useful.
 
 Making a module that is both easy/practical to use for users without
 also losing options is usually bit tricky: we want users to be able to
