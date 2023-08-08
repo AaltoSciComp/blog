@@ -1,5 +1,5 @@
 :blogpost: true
-:date: 2023-04-27
+:date: 2023-08-10
 :author: Richard Darst
 :category: triton
 
@@ -14,6 +14,10 @@ operating system software, but also such a basic update affects almost
 every user.  **For a short time, this will make a lot of work for almost
 every user.  This post gives advance warning and a chance of feedback
 of how to make the update most usable.**
+
+This post is just advance warning and things to prepare already.  All
+actual instructions will come later.
+
 
 What will happen
 ----------------
@@ -37,7 +41,6 @@ different login nodes), with the same filesystems mounted (same data
 available) and some compute resources still available there, so that
 people can slowly migrate.  But the old one won't stay running too
 long, to avoid long maintenance effort or splitting of the resources.
-
 
 
 Reproduciblity
@@ -74,8 +77,14 @@ What you can do:
   <https://scicomp.aalto.fi/help/garage/>`__ early and often.
 
 
+Feedback and future usability
+-----------------------------
 
-Feedback
---------
+If there are any annoyances about Triton that you'd like us to
+consider for the upgrade, now is the time to let us know so we can
+plan them.  **We especially value feedback on usability problems.**
 
-Discuss with us in `our chat <https://scicomp.zulip.cs.aalto.fi/#narrow/stream/6-triton/topic/feedback.on.new.Triton>`__.
+Discuss with us in `our chat
+<https://scicomp.zulip.cs.aalto.fi/#narrow/stream/6-triton/topic/feedback.on.new.Triton>`__,
+or `open a Triton issue
+<https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues/>`__.
