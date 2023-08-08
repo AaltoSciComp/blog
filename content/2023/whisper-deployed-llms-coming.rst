@@ -1,5 +1,5 @@
 :blogpost: true
-:date: 2023-07-31
+:date: 2023-08-08
 :author: Richard Darst, Mira Salmensaari
 :category: software, AI, whisper
 
@@ -77,17 +77,20 @@ the most talked about ones aren't available for local use.
 The role of ASC
 ---------------
 
+**Contact us if you need other models deployed, or if you have trouble
+using what's already out there.  We are still in an early phase, and
+there will probably be some difficulties in availability,
+accessibility, and reusability.** `Contact us early if you notice
+anything that's not right <https://scicomp.aalto.fi/help/>`__.  We
+both help installing things and `help using them as a research
+engineer partner <https://scicomp.aalto.fi/rse/>`__.
+
 It's clear that artificial intelligence and machine learning tools
 will become more critical tools for other research.  The difficulty in
 deploying and using them could become a barrier, and that is where
 Aalto Scientific Computing comes in.  It's our goal to make sure the
 infrastructure that researchers need is ready and able to be used by
 everyone, not just those with classic HPC experience.
-
-We're still in the starting phases, so if you need help, `let us know
-<https://scicomp.aalto.fi/help/>`__.  We both help installing things
-and `help using them as a collaborator
-<https://scicomp.aalto.fi/rse/>`__.
 
 
 
