@@ -7,7 +7,7 @@
 Whisper deployed on Triton, LLMs coming
 =======================================
 
-.. highlight: console
+.. highlight:: console
 
 
 
@@ -25,7 +25,7 @@ in many different research and non-research use cases.  Using it isn't
 too hard - if you can install it and if you have a GPU.  Often, the
 installing can become a big barrier, especially for "just testing".
 
-Luckily, we have a `cluster <https://scicomp.aalto.fi/triton/>` with
+Luckily, we have a `cluster <https://scicomp.aalto.fi/triton/>`__ with
 GPUs and a way to provide software for researchers.  We've made
 Whisper available on the cluster as a `module
 <https://scicomp.aalto.fi/triton/tut/modules/>`__, so it's trivial to
@@ -46,7 +46,9 @@ usage, and users can always drop by and `ask us for help
 <https://scicomp.aalto.fi/help/>`__, for example our daily garage each
 day.
 
-(details)
+See the `Whisper on Triton documentation
+<https://scicomp.aalto.fi/triton/apps/whisper/>`__ for more
+information on the use.
 
 We are also preparing a way to do this through the cluster web
 interface `Open OnDemand
@@ -59,6 +61,8 @@ more accessible to other communities.
 LLMs and other tools next
 -------------------------
 
+We hope to make other tools available like this.
+
 Whisper is just one of the latest tools, but you've probably noticed
 that large language models are very popular these days.  There are, in
 fact, some that can run locally on our own cluster, and our goal is to
@@ -70,7 +74,7 @@ Local installs have various benefits, including lower cost (since we
 already own the hardware), being able to ensure reproducibility
 longer-term (since models are locally downloaded and preserved), and
 being able to use without various registrations.  The downside is that
-the most talked about ones aren't available for local use.
+the most popular ones ones aren't available for local use.
 
 
 
