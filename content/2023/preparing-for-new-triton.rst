@@ -7,7 +7,7 @@
 Preparing for new Triton
 ========================
 
-Sometime after summer 2023 (e.g. late August), we will do a major
+Sometime in autumn of 2023 (e.g. September), we will do a major
 update of Triton: updating the basic operating system, and thus almost
 everything else.  There are big benefits to this: newer basic
 operating system software, but also such a basic update affects almost
@@ -19,7 +19,7 @@ What will happen
 ----------------
 
 We will update the basic operating system from CentOS 7 to something
-else (Rocky 8 or Rocky 9).  We've ordered all new management hardware
+else (Rocky 9 or Red Hat 9).  We've ordered all new management hardware
 to make the backend more reliable and manageable.  Along with this
 comes with an update of the software build system, which should allow
 us to deploy software to our users even better.  We'll also update our
@@ -48,15 +48,13 @@ The biggest problem with big cluster updates like this is
 month?  If not, this is a big problem.  It's even worse if there is a
 much longer gap before you come back to it (paper revisions, anyone?).
 
-You could say there are two main categories:
+You could say there are two things that can go wrong with a cluster upgrade or change:
 
 - **Specific software/code that needs to be compiled and installed:**
-  There may be small updates needed, but good-enough software needs
-  updating to run on multiple operating systems anyway.
+  Software needs re-compiling for new clusters or new cluster OS updates.
 
 - **Whole workflows:** you need to make all the pieces work together.
-  Of which a lot of it relates to the first point, but still it gets
-  worse once everything goes together.
+  Different paths and workflow managers may need updating.
 
 What you can do:
 
@@ -64,6 +62,9 @@ What you can do:
   if you slowly clean up over time, so you can focus on the
   differences once the change happens.
 
+- Know what software you are using.  It's easier for us to re-install something we
+  have already installed when someone can tell us the exact name and version
+  that they are using.
 - `Tests for your software
   <https://coderefinery.github.io/testing/>`__.  Some way to validate
   that it works correctly.
