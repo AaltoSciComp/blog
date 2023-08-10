@@ -9,8 +9,8 @@ Research Software Engineer project funding: what's been working
 
 The "Research Software Engineer" service provides technical
 collaborators for researchers to complement their scientific
-knowledge.  `Read about Aalto RSE here
-<https://scicomp.aalto.fi/rse/>`__.  The idea of this service was that
+knowledge.  :external:doc:`Read about Aalto RSE here
+<rse/index>`.  The idea of this service was that
 it would be available to everyone, but some projects who made
 extensive use would fund it themselves.  We hoped for around 50%
 project funding.
@@ -52,7 +52,7 @@ have extra funding that needs to be used?  You know your group needs
 support but you can't make it a specific project?  Hire RSEs on
 long-term retainers and we're there for you as needed.  **You will
 always get priority for all the quick questions you have** (in
-:doc:`/help/garage` or otherwise), we will more quickly make time for
+:external:doc:`help/garage` or otherwise), we will more quickly make time for
 your medium projects, and can attend your other group meetings, and so
 on.  As your team has time, we'll make high-impact improvements here
 and there.  This could be (for example) anywhere from 10-40% time over
