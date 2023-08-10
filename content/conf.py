@@ -81,3 +81,9 @@ ogp_site_name = "Aalto SciComp Blog"
 ogp_image = "https://scicomp.aalto.fi/_static/asc-socialshare-02.png"
 ogp_image_alt = "ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training."
 ogp_custom_meta_tags = ['<meta property="twitter:creator" content="@SciCompAalto" />']
+
+intersphinx_mapping = {
+    'scicomp': ('https://scicomp.aalto.fi/', None),
+    }
+# Note: for docs, use :external:doc`rse/index`.  Use :external: and do NOT use leading `/`.
+    #intersphinx_disabled_reftypes = []
