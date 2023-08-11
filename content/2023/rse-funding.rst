@@ -13,6 +13,13 @@ knowledge.  :external:doc:`Read about Aalto RSE here <rse/index>`.
 The idea of this service was that it would be available to everyone,
 but some projects who made extensive use would fund it themselves.
 
+If you are a group leader reading this, Aalto RSE can help you release
+research code, debug it, make it reusable, rescue old code from former
+members and make it usable again, make it run on our cluster or CSC's
+clusters, manage data, prepare data for easy use, and so on.  If it's
+not long (less than a month), our work is free, if it's more than a
+month, the below applies.
+
 
 
 Funding in the past
