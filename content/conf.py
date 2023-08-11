@@ -82,6 +82,18 @@ ogp_image = "https://scicomp.aalto.fi/_static/asc-socialshare-02.png"
 ogp_image_alt = "ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training."
 ogp_custom_meta_tags = ['<meta property="twitter:creator" content="@SciCompAalto" />']
 
+
+import os
+if (
+    'GITHUB_ACTION' in os.environ
+    and os.environ.get('GITHUB_REPOSITORY', '').lower() == 'aaltoscicomp/blog'
+    and os.environ.get('GITHUB_REF') == 'refs/heads/main'
+    ):
+    html_js_files = [
+        ('https://plausible.cs.aalto.fi/js/script.js', {"data-domain": "aaltoscicomp.github.io", "defer": "defer"}),
+    ]
+
+
 intersphinx_mapping = {
     'scicomp': ('https://scicomp.aalto.fi/', None),
     }
