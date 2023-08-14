@@ -1,7 +1,7 @@
 :blogpost: true
-:date: 2023-08-06
+:date: 2023-08-17
 :author: Richard Darst
-:category: rse, internal
+:category: rse, ASC
 
 
 The Aalto RSE hiring process
@@ -9,7 +9,7 @@ The Aalto RSE hiring process
 
 This post describes the hiring process of Aalto RSE.  The goal is to
 make hiring more equitable by providing the background information so
-that everyone can apply successfully.  For those not applying to us,
+.that everyone can apply successfully.  For those not applying to us,
 it might still provide some valuable insight about how to market your
 skills as a PhD making a sideways career move.  What's said here may
 not apply to every organization, but it might give you some things to
@@ -19,8 +19,8 @@ think about.
 Background
 ----------
 
-`Aalto RSE <https://scicomp.aalto.fi/rse/>`__ has usually hired people
-who have postdoc experience and will transition to a more applied
+:doc:`Aalto RSE <rse/index>` has usually hired people who have postdoc
+experience and will transition to a more applied
 software/data/computing oriented role (as opposed to being focused on
 writing papers).  For many people, we are the first experience of job
 applications post-degree and thus people have to learn how to present
@@ -28,7 +28,7 @@ their skills in a new, non-academic context.
 
 One should start by reading about us - we have lots of information
 publicly available about what we do and how we think.  This should be
-understood in order for the next steps.
+understood in order to do the next steps well.
 
 
 The cover letter
@@ -50,22 +50,23 @@ a good fit?"  (It's always interesting to get letters which clearly
 don't understand the job, but on the other hand it's an easy filter.)
 The first paragraph should answer this question and that the rest of
 the letter will go into detail about why.  Start with the most
-important information, don't keep us in suspense.
+important information, don't make it hard for us.
 
-Beyond that, talk about skills as relevant to the organization.
-Discuss special projects, including non-academic ones or random things
-that you are interested in.  Our job advertisement specifically gives
-you a lot of ideas that you can talk about.  Anything specifically
-important to the job should be pointed out here and not just left in
-the CV.
+Beyond that, talk about interests and skills as relevant to the
+organization.  Discuss special projects, including non-academic ones
+or random things that you are interested in (this is especially true
+for us, since we are the transition from academia to practical work).
+Our job advertisement gives you some specific ideas that you can talk
+about.  Anything specifically important to the job should be pointed
+out here and not just left in the CV.
 
 If you don't exactly fit the stated job requirements: here is the
 chance to explain it.  The job requirement has to say roughly what we
 need (to not waste people's time when applying), but there are many
 cases where someone with a different experience can accomplish our
-actual goal (as said in the job ad or in your background research).  A
-person that can say this, and that they are adaptable, can have a very
-good chance.
+actual goal (as said in the job ad or found in your background
+research).  A person that can say this, that they are adaptable, and
+will have a very good chance.
 
 We have adopted some system of anonymous recruiting.  We request that
 cover letters are submitted without identifying information (name,
@@ -96,14 +97,14 @@ and have plenty of applications, make it easy to read.
 Open Science isn't just good for research, it's good for you, too.  If
 you can point to public repositories of work you have done, this is
 very useful.  Things like Gitlab/Github profiles with activity and
-your own projects, data you have released, etc.  They don't have to be
-perfect - something is better than nothing.  The best case would be a
-few projects which are well-done (and you know it and point them out
-to us), and plenty more stuff that may be of lower quality to show you
-can get simple stuff done simply.  Not everyone is fortunate to have a
-field where they can practice open science throughout their career,
-but even publishing a project or two before they apply for a job with
-us is very useful.
+your own projects, links to data you have released, etc.  They don't
+have to be perfect - something is better than nothing.  The best case
+would be a few projects which are well-done (and you know it and point
+them out to us), and plenty more stuff that may be of lower quality to
+show you can get simple stuff done simply.  Not everyone is fortunate
+to have a field where they can practice open science throughout their
+career, but even publishing a project or two before they apply for a
+job with us is very useful.
 
 Despite what the previous section said, we do try to dig through
 applications that seem on-topic but don't say everything we are looking
@@ -119,12 +120,8 @@ filtering includes:
 * Do they know what job they are applying for?  Can they connect their
   skills to the job?
 
-* Have they touched on the main points in our job advertisement and the
-  linked "`Become a RSE
-  <https://scicomp.aalto.fi/rse/become-a-rse/>`__" page?  Some of the
-  most important funtamental skills include basic Linux
-  skills, programming (at least one language relatively well, ability
-  to learn quickly), general data handling skills, any other
+* Have they touched on the main points in our job advertisement and
+  the linked ":doc:`Become a RSE <rse/become-a-rse>`" page?
 
 * Are they interested in teaching and mentoring?  Do they know what
   kind of teaching and mentoring they do?
@@ -134,14 +131,22 @@ filtering includes:
 * Any relevant skills about this call's particular topic (if there is
   any)?
 
-* How do their skills match skills which we are currently missing?
+* How do their skills match skills which we are currently missing?\
 
-The recruitment team makes passes over and we discuss how to filter
-down.  We try to get a good variety of candidates.
+* How similar has their previous work been to "research engineering"
+  (helping the research process) instead of playing the academic game?
+
+The recruitment team makes several passes over and we discuss how to
+filter down.  We try to get a good variety of candidates.
 
 
 Interviews
 ----------
+
+Sometimes, there is some initial "video interviews" as recommended by
+our HR, but we don't really like the non-interactive and high-pressure
+nature of that.  Still, it provides some background familiarity for
+the main interviews.  One shouldn't worry too much about this.
 
 Our actual interviews are not designed to be stressful.  We have some
 prepared questions and go through them in a friendly manner.  You have
@@ -154,7 +159,11 @@ things which you'd need to know is so broad, it's more important that
 you can learn things quickly.  Since we usually interview relatively
 advanced people, we can instead look at existing projects they have
 done and check references, without having to do a technical
-challenge.  This may be updated in the future.
+challenge.  This may change depending on the type of candidates we are
+interviewing, but just like the main interviews we are more interested
+in how people think, rather than raw knowledge.
+
+In the future, there might be more "meet the team" kind of events.
 
 We want to respond to people as soon as possible, but there's a simple
 fact: we don't want to tell anyone "no" until we are very sure we have
