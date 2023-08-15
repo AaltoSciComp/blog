@@ -34,7 +34,7 @@ html_sidebars = {
 # -- Project information -----------------------------------------------------
 
 project = 'Aalto Scientific Computing Blog'
-copyright = '2021, Aalto Scientific Computing'
+copyright = '2021-2023, Aalto Scientific Computing'
 author = 'Aalto Scientific Computing'
 
 
