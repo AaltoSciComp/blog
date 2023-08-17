@@ -15,6 +15,9 @@ skills as a PhD making a sideways career move.  What's said here may
 not apply to every organization, but it might give you some things to
 think about.
 
+Disclaimer: This page is a rough average description of the past, not
+a promise to always do this in the future.
+
 
 Background
 ----------
@@ -123,18 +126,20 @@ filtering includes:
 * Have they touched on the main points in our job advertisement and
   the linked ":doc:`Become a RSE <rse/become-a-rse>`" page?
 
-* Are they interested in teaching and mentoring?  Do they know what
-  kind of teaching and mentoring they do?
+* Are they interested in teaching, mentoring, and real collaborative
+  projects?  Do they know what kind of teaching and mentoring we do?
 
 * Is there enough knowledge about the research process?
 
 * Any relevant skills about this call's particular topic (if there is
   any)?
 
-* How do their skills match skills which we are currently missing?\
+* How do their skills and experience match what our team is currently
+  missing, regardless of the open call?
 
 * How similar has their previous work been to "research engineering"
-  (helping the research process) instead of playing the academic game?
+  (helping the research process) instead of only focusing on academic
+  promotion?
 
 The recruitment team makes several passes over and we discuss how to
 filter down.  We try to get a good variety of candidates.
