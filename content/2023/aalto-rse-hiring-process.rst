@@ -65,11 +65,12 @@ out here and not just left in the CV.
 
 If you don't exactly fit the stated job requirements: here is the
 chance to explain it.  The job requirement has to say roughly what we
-need (to not waste people's time when applying), but there are many
-cases where someone with a different experience can accomplish our
-actual goal (as said in the job ad or found in your background
-research).  A person that can say this, that they are adaptable, and
-will have a very good chance.
+need (to not waste people's time when applying, and because our hiring
+decisions must be justifiable based on the requirements), but there
+are many cases where someone with a different experience can
+accomplish our actual goal (as said in the job ad or found in your
+background research).  A person that can say this, that they are
+adaptable, and will have a very good chance.
 
 We have adopted some system of anonymous recruiting.  We request that
 cover letters are submitted without identifying information (name,
@@ -148,10 +149,12 @@ filter down.  We try to get a good variety of candidates.
 Interviews
 ----------
 
-Sometimes, there is some initial "video interviews" as recommended by
-our HR, but we don't really like the non-interactive and high-pressure
-nature of that.  Still, it provides some background familiarity for
-the main interviews.  One shouldn't worry too much about this.
+Sometimes, there is some initial recorded "video interviews", which
+provide some initial familiarity in both directions before the actual
+interviews.  We know these are non-interactive and a recording isn't a
+conversation so this is harder than an interview, but we consider that
+when watching them.  One shouldn't worry too much about these, if we
+do them.
 
 Our actual interviews are not designed to be stressful.  We have some
 prepared questions and go through them in a friendly manner.  You have
