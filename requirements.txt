@@ -5,3 +5,4 @@ sphinx_rtd_theme_ext_color_contrast
 myst_parser
 https://github.com/aaltoscicomp/sphinx-aaltoscicomp-branding/archive/master.zip
 sphinxext-opengraph
+sphinx-togglebutton
