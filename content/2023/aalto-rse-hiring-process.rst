@@ -1,5 +1,5 @@
 :blogpost: true
-:date: 2023-08-17
+:date: 2023-08-21
 :author: Richard Darst
 :category: rse, ASC
 
@@ -200,4 +200,145 @@ a numbers game.
 Old job application text
 ------------------------
 
-[old application text to be inserted here]
+For reference, this is an older job application text, so that you can
+see how the things above are integrated.  (to be updated with the 2023
+version soon)
+
+.. admonition:: RSE job advertisement, 2022
+   :class: dropdown
+
+   [ standard header removed ]
+
+   Aalto Scientific Computing is looking for a
+
+   **Research Software Engineer/Supporter**
+
+   To a permanent, full-time position.
+
+   Are you more of a programmer than your researcher colleagues? Are you
+   more of a researcher than commercial developers? Do you fit in both, but
+   have a home in neither? Be a Research Software Engineer with us and find
+   your home. If you are looking for a career path which combines the
+   interesting parts of both fields, this is a good choice.
+
+   `Aalto Scientific Computing <https://scicomp.aalto.fi/about/>`__ is an
+   elite "special forces" unit of Research IT, providing high-performance
+   computing hardware, management, research support, teaching, and
+   training. Our team consists of a core of PhD staff working with top
+   researchers throughout the university. Our services are used by every
+   school at Aalto University and known throughout Finland and the Nordics.
+   All our work is open-source by default and we take an active part in
+   worldwide projects.
+
+   **In this position, you will:**
+
+   -  Provide software development and consulting as a service, depending
+      on demand from research groups.
+
+   -  Provide one-on-one research support from a software, programming,
+      Linux, data, and infrastructure perspective: short-term projects
+      helping researchers with specific tasks, so that the researchers
+      gain competence to work independently.
+
+   -  As needed and depending on interest, teaching and other research
+      infrastructure support.
+
+   -  Continually learn new skills as part of our team.
+
+   **Primary qualifications**: There are two main tracks, and candidates of
+   diverse backgrounds are encouraged to apply – every candidate will be
+   evaluated according to their own unique experiences.
+
+   -  PhD degree with research experience in some computational field and
+      much knowledge of practical computing strategies for research, or
+
+   -  Software developer or computational scientist with a strong
+      software/open source/Linux background, scientific computing
+      experience, and some experience in research. Masters degree or
+      similar experience.
+
+   **This particular call emphasizes the ability to work in machine
+   learning and AI environments**. The ideal candidate will be working
+   closely with machine learning researchers, and thus a background in
+   machine learning is highly desirable.
+
+   **Important skills:**
+
+   -  Ability to tackle any problem with a researcher's mindset and a
+      developer's passion for technology.
+
+   -  Experience or knowledge of the principles of open source software,
+      open science, and software development tools such as version
+      control.
+
+   -  Please see https://scicomp.aalto.fi/rse/become-a-rse/ for more
+      information on what kind of skills we value - or more precisely
+      what you are likely to learn.
+
+   **What we offer**:
+
+   -  You will join the dynamic Aalto Scientific Computing team, where you
+      will learn from some of the best research IT specialists in
+      Finland.
+
+   -  Co-working within top-quality research groups, getting experience in
+      a wide variety of fields and developing an extensive network of
+      scientific contacts. This includes contacts to the Aalto startup
+      scene and community.
+
+   -  A way to be close to the research process while focusing on
+      interesting computational problems and not the publication
+      process.
+
+   -  Our program will offer you a chance to improve your software skills –
+      you are expected to engage in plenty of professional development.
+
+   -  Open Source is our expectation. All (or most) of your code may be
+      open source and may be added to your public CV, depending on the
+      needs of researchers.
+
+   Salary will be according to experience, for a recently graduated PhD
+   similar to a postdoc salary. Work hours are flexible, but are expected
+   to sync with the audience being served. Primary workplace is Otaniemi,
+   Espoo (Helsinki region), Finland. Aalto University has a hybrid work
+   policy which allows 60% remote work possibility, and our team takes good
+   advantage of this flexibility.
+
+   **To apply successfully**:
+
+   -  Please include a separate cover letter (~1-2 pages). Please try to
+      write your cover letter avoiding information like name, gender,
+      nationality or other demographic information that is not directly
+      related to why you would be the right person for this position
+      (this includes, for example, a signature on the letter) unless you
+      think it benefits you. This will assist in anonymous recruitment
+      possibilities. The letter should include for example:
+
+      -  Why being a Research Software Engineer is for you,
+
+      -  past research experience, if any
+
+      -  past technical teaching or mentoring experience,
+
+      -  past software development experience (even informal
+         self-learning),
+
+      -  past Linux, command line, or scripting experience,
+
+      -  highlight one (or a few) collaborative projects you have taken
+         part in and your role within it, and
+
+      -  what you bring and what you intend to learn.
+
+   -  A normal professional or academic CV including
+
+      -  a list of your technical and programming tools and level of
+         proficiency (e.g. basic/proficient/expert). This is the time to
+         show the breadth of your experience.
+
+      -  Github link or other public sample code. If not available,
+         whatever is possible to demonstrate past programming
+         experience. Please highlight one or two of your outstanding
+         research software projects.
+
+   [ standard footer removed ]

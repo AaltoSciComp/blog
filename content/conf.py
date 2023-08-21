@@ -51,6 +51,7 @@ extensions = [
     'sphinx_rtd_theme_ext_color_contrast',
     'sphinx_aaltoscicomp_branding',
     'sphinxext.opengraph',
+    'sphinx_togglebutton',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
