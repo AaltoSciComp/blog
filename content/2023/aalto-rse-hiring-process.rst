@@ -9,7 +9,7 @@ The Aalto RSE hiring process
 
 This post describes the hiring process of Aalto RSE.  The goal is to
 make hiring more equitable by providing the background information so
-.that everyone can apply successfully.  For those not applying to us,
+that everyone can apply successfully.  For those not applying to us,
 it might still provide some valuable insight about how to market your
 skills as a PhD making a sideways career move.  What's said here may
 not apply to every organization, but it might give you some things to
