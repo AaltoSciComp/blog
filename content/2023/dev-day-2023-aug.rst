@@ -39,7 +39,7 @@ Triton v3 is still on the way.  This isn't a new cluster, but a new
 operating system which individual nodes will be migrated to slowly
 (while maintaining the same accounts and data).  Most of this happens
 in the background, but the change of base operating system images will
-require many most code to be recomplied, which will require attention
+require most code to be recompiled, which will require attention
 from many users.  The transition can be made slowly, both old and new
 OSs will run for a time being.  There won't be a change in total
 amount of computing power.
