@@ -7,7 +7,7 @@
 Preparing for new Triton
 ========================
 
-Sometime in autumn of 2023 (e.g. September), we will do a major
+Sometime in autumn of 2023 (e.g. October/November), we will do a major
 update of Triton: updating the basic operating system, and thus almost
 everything else.  There are big benefits to this: newer basic
 operating system software, but also such a basic update affects almost
@@ -23,7 +23,7 @@ What will happen
 ----------------
 
 We will update the basic operating system from CentOS 7 to something
-else (Rocky 9 or Red Hat 9).  We've ordered all new management hardware
+else (Red Hat 9).  We've ordered all new management hardware
 to make the backend more reliable and manageable.  Along with this
 comes with an update of the software build system, which should allow
 us to deploy software to our users even better.  We'll also update our
@@ -88,3 +88,7 @@ Discuss with us in `our chat
 <https://scicomp.zulip.cs.aalto.fi/#narrow/stream/6-triton/topic/feedback.on.new.Triton>`__,
 or `open a Triton issue
 <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues/>`__.
+
+
+*This post has been updated with minor corrections, changes be found in
+git history.*
