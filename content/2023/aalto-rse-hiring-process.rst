@@ -22,7 +22,7 @@ a promise to always do this in the future.
 Background
 ----------
 
-:doc:`Aalto RSE <rse/index>` has usually hired people who have postdoc
+:external:doc:`Aalto RSE <rse/index>` has usually hired people who have postdoc
 experience and will transition to a more applied
 software/data/computing oriented role (as opposed to being focused on
 writing papers).  For many people, we are the first experience of job
@@ -125,7 +125,7 @@ filtering includes:
   skills to the job?
 
 * Have they touched on the main points in our job advertisement and
-  the linked ":doc:`Become a RSE <rse/become-a-rse>`" page?
+  the linked ":external:doc:`Become a RSE <rse/become-a-rse>`" page?
 
 * Are they interested in teaching, mentoring, and real collaborative
   projects?  Do they know what kind of teaching and mentoring we do?
