@@ -32,10 +32,10 @@ preemptively doing some major user support.
 What's happening
 ----------------
 
-What is **not** happening is: requiring locally encrypted SSH keys.
+What is **not** happening is: requiring locally encrypted SSH keys (although this is highly recommended).
 
-What **is** happening: When you connect to a SSH server from outside
-Aalto networks, you will need to have a SSH key set up **and** send
+What **is** happening: When you connect to an SSH server from outside
+Aalto networks, you will need to have an SSH key set up **and** send
 your Aalto password to the remote server interactively.
 
 
@@ -93,7 +93,8 @@ encrypted SSH key?  A SSH key requires something you have (the key)
 and something you know (the password), doesn't it?  And doesn't
 require sending a plaintext password to the remote server.  This was
 decided by whoever is setting this up, probably partly due to the
-difficulty in enforcing passwords on SSH keys.
+fact that it is not possible to enforce passwords on SSH keys via
+the server config.
 
 In general (outside of Aalto), you should use SSH keys everywhere and
 be suspicious of ever sending plaintext passwords to remote servers
@@ -111,7 +112,10 @@ designed this or communicated it).
 
 There are, unfortunately, some trivial workarounds that involve
 putting your password in plain text on your computer to script things.
-However, it's better to :external:doc:`contact us <help/garage>` to
+However, please note that writing passwords down (outside of password
+managers) is bad security practise and against the `Aalto password guidelines
+<https://www.aalto.fi/en/services/password-guidelines>`__. It is better to
+:external:doc:`contact us <help/garage>` to
 help design a better and more secure workflow, or ask `IT Services
 <https://www.aalto.fi/en/services/it-services>`__ and ask them to
 consider other use cases.
