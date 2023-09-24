@@ -46,7 +46,7 @@ If you already have an SSH key set up, you'll start to be asked to
 enter a password every time you connect.
 
 You can always connect to the Aalto VPN in advance to prevent this,
-but this doesn't work in all cases.
+but there may be cases where this isn't a practical solution.
 
 If you do not have an SSH key set up, you should:
 
@@ -97,9 +97,9 @@ fact that it is not possible to enforce passwords on SSH keys via
 the server config.
 
 In general (outside of Aalto), you should use SSH keys everywhere and
-be suspicious of ever sending plaintext passwords to remote servers
+be wary of ever sending plaintext passwords to remote servers
 (even in conjunction with an SSH key).  Security is important, and by
-using SSH keys with a local password you are doing your part.
+using SSH keys with local encryption of the key you are doing your part.
 
 
 
