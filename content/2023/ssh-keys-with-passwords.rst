@@ -42,15 +42,15 @@ your Aalto password to the remote server interactively.
 What to do
 ----------
 
-If you already have a SSH key set up, you'll start to be asked to
+If you already have an SSH key set up, you'll start to be asked to
 enter a password every time you connect.
 
 You can always connect to the Aalto VPN in advance to prevent this,
 but this doesn't work in all cases.
 
-If you do not have a SSH key set up, you should:
+If you do not have an SSH key set up, you should:
 
-- Follow :external:doc:`scicomp/ssh` to generate a SSH key - we have
+- Follow :external:doc:`scicomp/ssh` to generate an SSH key - we have
   *heavily* revised this page to cover almost every common SSH
   arrangement.
 
@@ -67,7 +67,7 @@ If you do not have a SSH key set up, you should:
   - You could place the key while on an Aalto network (as usual, this
     means ``eduroam`` or ``aalto`` *only* from an Aalto computer).
 
-  - You could use another computer that's already set up with a SSH
+  - You could use another computer that's already set up with an SSH
     key to place the key.
 
 - The key will then be available on all common Aalto shell servers
@@ -88,8 +88,8 @@ Password-only login is simply not feasible anymore (nor for some
 time).  Removing passwords as an option is good security practice that
 most organizations should adopt these days.
 
-But why a ssh key *and* remote password instead of a properly
-encrypted SSH key?  A SSH key requires something you have (the key)
+But why an ssh key *and* remote password instead of a properly
+encrypted SSH key?  An SSH key requires something you have (the key)
 and something you know (the password), doesn't it?  And doesn't
 require sending a plaintext password to the remote server.  This was
 decided by whoever is setting this up, probably partly due to the
@@ -98,7 +98,7 @@ the server config.
 
 In general (outside of Aalto), you should use SSH keys everywhere and
 be suspicious of ever sending plaintext passwords to remote servers
-(even in conjunction with a SSH key).  Security is important, and by
+(even in conjunction with an SSH key).  Security is important, and by
 using SSH keys with a local password you are doing your part.
 
 
