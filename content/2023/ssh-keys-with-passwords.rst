@@ -1,7 +1,7 @@
 :blogpost: true
-:date: 2023-09-24
+:date: 2023-09-27
 :author: Richard Darst
-:category: aalto
+:category: aalto, ssh
 
 
 Aalto public servers requiring passwords with SSH keys
