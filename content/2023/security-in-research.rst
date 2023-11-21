@@ -86,7 +86,7 @@ confidential), yes, you can treat it as public data."  This isn't
 written down anywhere, but is the only reasonable interpretation for
 modern science.
 
-Recommendation:
+Recommendations:
 
 * Research data is not treated as a single type of data but each
   dataset be treated as it deserves to be.  Common recommendations
@@ -99,9 +99,20 @@ Recommendation:
   = research data which doesn't have [list of reasons to be
   confidential]"
 
+* Researchers self-classify their data at the minimum required level,
+  but use the best possible tools.  The tools recommended for
+  confidential data generally have good usability and other good
+  features (backups and so on).
+
 * Open Science advocates promote early data sharing for it's security
   advantages.  The Open Science team improves documentation about
   classification of research data.
+
+* Data Agents learn more about security practices and give feedback
+  from more research fields, and can serve as a front line
+  recommending secure practices.  The security team takes into account
+  Data Agent feedback so that researchers are not afraid of required
+  practices.
 
 As an aside, integrity of data should be separated from
 confidentiality: research data must be preserved for validation, but
@@ -145,6 +156,14 @@ and not required, but also not prohibited.
 
 
 
+More agile support of research development
+------------------------------------------
+
+Currently, most research development
+
+
+
+
 Thoughts on university's role
 -----------------------------
 
@@ -164,3 +183,15 @@ environment more like a slow-moving governmental institution.  The
 disconnect in environment vs policies results in a more active
 disregard of university policies in places they are actually
 important.
+
+
+
+Other notes
+-----------
+
+The security landscape in Finland is different than in other
+countries, especially for students.  Student have a study *right*, not
+*privilege*, and we can not require students to use services which
+haven't been evaluated and have a specific data protection agreement
+with the university.  The "public service" comments above can not
+apply to any teaching work.
