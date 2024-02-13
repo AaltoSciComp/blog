@@ -22,19 +22,17 @@ month, the below applies.
 
 
 
-Funding in the past
--------------------
+Early project funding
+---------------------
 
-When we started, we hoped for around 50% project funding.
+When we started, we hoped for around 50% project funding.  The idea
+was that a lot of the funding for the service would come from the
+research projects themselves.  This hasn't really worked out so well,
+because a) we accomplish the vast majority of our projects quickly, in
+less than a few weeks, and b) finance would understandably not like to
+deal with small transactions for small amounts of time.
 
-When started, the idea was that a lot of the funding for
-the RSEs would come from the research projects themselves.  This
-hasn't really worked out so well, because a) we accomplish the vast
-majority of our projects quickly, in less than a few weeks, and b)
-finance would understandably not like to deal with small transactions
-for small amounts of time.
-
-In the end, we basically have received only a small amount of the
+What actually happened was that we basically have received only a small amount of the
 project funding we would have wanted.  On the other hand, this also
 means we have supported a far wider variety of projects than we would
 have otherwise.  It also means we are better accomplishing our other
