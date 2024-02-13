@@ -68,7 +68,7 @@ improvements here and there.  This could be (for example) anywhere
 from 10-40% time over a long period.
 
 We *have* worked out how to do both one-off projects and retainers
-with Finance.  As for as external finders are concerned, our staff
+with Finance.  As for as external funders are concerned, our staff
 count as researchers, so we can use any funding you might have.
 
 **If you think you have a project or want us on retainer, let us
