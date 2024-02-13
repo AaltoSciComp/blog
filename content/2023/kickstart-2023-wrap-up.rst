@@ -7,8 +7,8 @@
 Kickstart 2023 wrap-up and thoughts for the future
 ==================================================
 
-Our `kickstart course
-<https://scicomp.aalto.fi/training/scip/kickstart-2023/>`__ came and
+Our :external:doc:`kickstart course
+<training/scip/kickstart-2023>` came and
 went with very few problems.  This post summarizes our general
 thoughts on the course and its format.
 
@@ -20,26 +20,45 @@ likely to stop anytime soon.
 
 
 
+History of the course
+---------------------
+The course has run since around 2015 or so.  Until mid 2020, it was always
+in-person only.  Until (and including) 2022, it ran twice a year,
+January and June, but now it runs only in June (increased availability
+of videos + the material compensates).  It runs in June so that it
+aligns with new summer research interns starting.  Until around 2020,
+it was mostly about using the :external:doc:`HPC cluster at Aalto
+University <triton/index>`, but since then there has been more
+emphasis on day 1 covering generic skills needed for scientific
+computing and the big picture of things.
+
+
+
 General feedback
 ----------------
 
 Our general feedback remains quite positive.  Our streaming +
 coteaching + collaborative notes format is still well received, and
 there seems to be little reason to go back for courses of smaller
-scale.  Reading + livestream + videos is a good combination.
+scale.  Instead of just lectures, written material (tutorials in info
+on scicomp.aalto.fi) + livestream + videos is a good combination.
 
 
 
 Not enough time
 ---------------
 
-There is never enough time - not much else to say.
+There is never enough time - not much else to say.  Each year there is
+a different trade-off between how much we cover and how brief we are.
+(There are always people who say we should go more in-depth, and some
+who say we go too much in-depth.  Such is life.)
+
 
 
 Reduce repetition
 -----------------
 
-Repitition is good, but not when it's a sign that we can't stop
+Repetition is good, but not when it's a sign that we can't stop
 talking and keep saying the same thing over and over.  The best
 lessons seemed to be the ones that were taught most quickly, since it
 has a high density of new information.  We should strive to make more
@@ -65,7 +84,7 @@ Linux shell and other prerequisites
 As usual, we expected our learners to read our `shell crash course
 <https://scicomp.aalto.fi/scicomp/shell/>`__ in advance.  We also had
 a new tutorial on :external:doc:`using the cluster from the shell
-</triton/tut/cluster-shell>`.  This helped some, but it was still a
+<triton/tut/cluster-shell>`.  This helped some, but it was still a
 problem.
 
 Reflection: this will always be a problem in any course that has a
@@ -75,11 +94,12 @@ course and then strive to get the prerequisites later.
 
 
 
-Divide the course into two
---------------------------
+Should the course be divided into two?
+--------------------------------------
 
 Internally, we had this thought of dividing the course in two: a basic
-part at the start of the summer, and an advanced part at the end -
+part at the start of the summer, and an advanced part at the end of
+the summer -
 since brand new researchers may have trouble understanding
 everything.  On the other hand, the fact we have videos means that
 people can come back and review the material when they are ready.  So
@@ -129,7 +149,7 @@ person votes for/agrees with that option:
 - Really good format with the streaming and the shared document for
   questions. ooooo
 - The cat kept me focused in the lecture
-- Live interaction with the instructes were very helpful and excercises were nice
+- Live interaction with the instructes were very helpful and exercises were nice
 - I really appreaciate the instructors took the time to explain the
   jargons, instead of just letting them fly around. o
 - The fact that the instructors were really nice contributed to the
@@ -151,6 +171,6 @@ pretty well. And videos/material allows follow-up.
 
 See also
 --------
-- `Summer kickstart
-  <https://scicomp.aalto.fi/training/scip/kickstart-2023/>`__
+- :external:doc:`Summer kickstart
+  <training/scip/kickstart-2023>`
 - `How we did summer kickstart 2021 <https://www.youtube.com/watch?v=gi_zHFPgpfw&list=PLZLVmS9rf3nN1Rj-TAqFEzFM22Y1kJmvn>`__
