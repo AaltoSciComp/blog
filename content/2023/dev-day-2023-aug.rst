@@ -8,7 +8,7 @@ ASC development day, 2023 August
 ================================
 
 We had another development day (previous:
-:doc:`march-development-day`).  It went mostly like the last one, and
+:doc:`/2023/march-development-day`).  It went mostly like the last one, and
 we have less important news for the world, but below is the summary
 anyway.
 
@@ -26,7 +26,7 @@ Stats
   of them.
 * The number of :external:doc:`interactive <triton/tut/interactive>`
   and :external:doc:`Jupyter <triton/apps/jupyter>` users are increasing, while
-  :external:doc:`Open OnDemand <triton/apps/ood>` is decreasing.  This
+  :external:doc:`Open OnDemand <triton/usage/ood>` is decreasing.  This
   is the wrong direction from what we'd like.  We will open
   OOD to connections from all of Finland to make this easier.
 
@@ -68,7 +68,7 @@ also to get good quality video recordings for the future).
 Goals:
 
 * Developing and delivering the ":external:doc:`workflows
-  <training/scip/workflows-2023>`" course with CodeRefinery
+  <training/scip/workflows-2024>`" course with CodeRefinery
 * Short courses to record (e.g. rerun of debug series, once a week,
   record and publish).
 * Update :external:doc:`triton/usage/debugging` linking the

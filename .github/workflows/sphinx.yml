@@ -10,8 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: sphinx-doc/github-problem-matcher@master
+      - uses: actions/setup-python@v5
       - name: Dependencies
         run: pip install -r requirements.txt
       - name: Build
