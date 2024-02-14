@@ -36,13 +36,14 @@ The extra advantages of DuckDB are:
 - Extra built-in math and statistics functions
 - Many, many more tools for data import/export
 
-  - from csv, parquet, json, and even SQLite
+  - from csv, parquet, json, and SQLite (can open SQLite databases
+    directly as a first step)
 
 The extra disadvantages are:
 
 - Columns must be of consistent data types (or null).
 - `INSERTing data is basically too slow to be usable - use other
-  methods for importing
+  methods for batch importing
   data. <https://github.com/duckdb/duckdb/discussions/3433>`__
 
 
@@ -105,13 +106,26 @@ Examples
 
 Here are some examples.
 
-Open a SQLite database with DuckDB::
+Open a SQLite database with DuckDB:
+
+.. code-block::
 
   $ duckdb database.sqlite3
 
-Copy SQLite to an in-memory copy::
+Converting to DuckDB via command line:
+
+.. code-block:: console
+
+    $ duckdb new.duckdb "CREATE TABLE slurm AS (SELECT * FROM sqlite_scan('original.sqlite3', 'slurm'))"
+
+
+Copy SQLite to an in-memory copy:
+
+.. code-block::
 
    $ duckdb database.sqlite3
+
+::
 
    D ATTACH ':memory:' AS tmp;
    D CREATE TABLE tmp.tablename AS (SELECT * FROM tablename);
@@ -122,6 +136,13 @@ Similar, but copy to a DuckDB file::
   D ATTACH 'newfile.db';
   D CREATE TABLE newfile.tablename AS (SELECT * FROM tablename);
 
+Access from Python, to a ``pandas.DataFrame`` (``pandas.read_sql``
+also seems to work):
+
+.. code-block:: python
+
+    conn = duckdb.connect("database.sqlite3")
+    conn.execute("select avg(cputime) from slurm").df()
 
 `Importing from CSV files
 <https://duckdb.org/docs/data/csv/overview>`__
