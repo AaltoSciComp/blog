@@ -1,5 +1,5 @@
 :blogpost: true
-:date: 2023-06-08
+:date: 2024-02-13
 :author: Richard Darst
 :category: teaching
 
@@ -18,6 +18,8 @@ organization who will send your learners to us (and maybe co-teach)
 is the third year we've done the livestream format, and it's not
 likely to stop anytime soon.
 
+*This was originally written in June 2023 but publication was
+forgotten until 2024.*
 
 
 History of the course
