@@ -26,15 +26,17 @@ the right mental model for understanding it:
 
 - Serverless, in-process library
 - Database = single file
-- "Normal" SQL
-- Lightweight code, C++, easily embeddable in anything
-- Seems to value stability and portability
+- Normal SQL
+- Lightweight code, C++, so has very many different language bindings
+  and easy to link to if you need.
+- Seems to value stability and portability, but it doesn't promise an
+  unchanging database format yet.
 
 The extra advantages of DuckDB are:
 
-- Column oriented, which makes it much faster for analytics
-- Extra built-in math and statistics functions
-- Many, many more tools for data import/export
+- `Column oriented <https://en.wikipedia.org/wiki/Column-oriented_DBMS>`__, which makes it much faster for analytics
+- `Extra built-in math and statistics functions <https://duckdb.org/docs/sql/functions/overview>`__
+- Many, many more tools for `data import/export <https://duckdb.org/docs/data/overview>`__
 
   - from csv, parquet, json, and SQLite (can open SQLite databases
     directly as a first step)
@@ -99,10 +101,22 @@ ensuring type consistency:
   DuckDB will at read time.  (SQLite `3.37, 2021-11-27, actually can
   optionally <https://sqlite.org/stricttables.html>`__)
 
+Or, it might be even better to store your data straight in
+JSON/CSV/parquet files which can be imported efficiently.  For CSV,
+basically make things as well-formed as possible.  For JSON, each line
+as an `{"key":value, ...}` works well (but it can import other
+formats).  For anything, makes sure data types of each column are
+consistent.
+
+
 
 
 Examples
 --------
+
+DuckDB is good for anything where you do vectorized operations over
+columns (this is basically the purpose of a column-oriented data
+store).
 
 Here are some examples.
 
@@ -157,6 +171,9 @@ There really isn't that much to do to change.  But, they serve
 different roles and one isn't better than the other: they are just
 different.  Both will have continued uses in the future.  They can
 even work together.
+
+Don't take everything here as the final story - we are still learning,
+too!
 
 
 
