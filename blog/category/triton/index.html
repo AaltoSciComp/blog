@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts in triton &#8212; Aalto Scientific Computing Blog  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=12dfc556" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script data-domain="aaltoscicomp.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <link rel="icon" href="../../../_static/logo-hexagons-02-compact.svg.ico"/>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="Posts in triton"
+/>
+
+
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+
+<div class="section ablog__collection">
+  <h1>
+    
+      Posts in
+      
+    triton
+    
+  </h1>
+  
+  
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
+      <a href="../../../2023/preparing-for-new-triton/">Preparing for new Triton</a>
+    </h2>
+    <ul class="ablog-archive">
+      <li>
+        
+        
+        2023 Sep 12
+        
+      </li>
+      <div class="ablog-sidebar-item ablog__postcard2">
+
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    Author:
+    
+    </span>
+  
+  
+  <a href="../../author/richard-darst/">Richard Darst</a>
+  
+  
+  
+</li>
+
+
+
+
+<li id="ablog-sidebar-item category ablog__category">
+  <span>
+    
+    Category:
+    
+    </span>
+  
+  
+  <a href="#">triton</a>
+  
+  
+  
+</li>
+
+
+
+</div>
+    </ul>
+    <p class="ablog-post-excerpt"><p>Sometime in autumn of 2023 (e.g. October/November), we will do a major
+update of Triton: updating the basic operating system, and thus almost
+everything else.  There are big benefits to this: newer basic
+operating system software, but also such a basic update affects almost
+every user.  <strong>For a short time, this will make a lot of work for almost
+every user.  This post gives advance warning and a chance of feedback
+of how to make the update most usable.</strong></p>
+<p>This post is just advance warning and things to prepare already.  All
+actual instructions will come later.</p>
+<p>We will update the basic operating system from CentOS 7 to something
+else (Red Hat 9).  We’ve ordered all new management hardware
+to make the backend more reliable and manageable.  Along with this
+comes with an update of the software build system, which should allow
+us to deploy software to our users even better.  We’ll also update our
+configuration management system for more reproducibility.</p>
+<p>We also hope to think about the usability of the new system: remove a
+lot of old options and add in new, simpler ways of doing what people
+need.</p>
+<p>All data and storage will remain the same, so there <strong>is no big data
+migration needed.</strong></p>
+<p>The old and new clusters will be accessible at the same time (two
+different login nodes), with the same filesystems mounted (same data
+available) and some compute resources still available there, so that
+people can slowly migrate.  But the old one won’t stay running too
+long, to avoid long maintenance effort or splitting of the resources.</p>
+<p>The biggest problem with big cluster updates like this is
+<strong>reproducibility</strong>: does you work from a month ago still work in one
+month?  If not, this is a big problem.  It’s even worse if there is a
+much longer gap before you come back to it (paper revisions, anyone?).</p>
+<p>You could say there are two things that can go wrong with a cluster upgrade or change:</p>
+<p><strong>Specific software/code that needs to be compiled and installed:</strong>
+Software needs re-compiling for new clusters or new cluster OS updates.</p>
+<p><strong>Whole workflows:</strong> you need to make all the pieces work together.
+Different paths and workflow managers may need updating.</p>
+<p>What you can do:</p>
+<p>Manage any messes you have earlier rather than later.  It’s better
+if you slowly clean up over time, so you can focus on the
+differences once the change happens.</p>
+<p>Know what software you are using.  It’s easier for us to re-install something we
+have already installed when someone can tell us the exact name and version
+that they are using.</p>
+<p><a class="reference external" href="https://coderefinery.github.io/testing/">Tests for your software</a>.  Some way to validate
+that it works correctly.</p>
+<p>Contact <a class="reference external" href="https://scicomp.aalto.fi/rse/">Aalto RSE</a> for hands-on
+help supporting the transition.  Come to the <a class="reference external" href="https://scicomp.aalto.fi/help/garage/">garage</a> early and often.</p>
+<p>If there are any annoyances about Triton that you’d like us to
+consider for the upgrade, now is the time to let us know so we can
+plan them.  <strong>We especially value feedback on usability problems.</strong></p>
+<p>Discuss with us in <a class="reference external" href="https://scicomp.zulip.cs.aalto.fi/#narrow/stream/6-triton/topic/feedback.on.new.Triton">our chat</a>,
+or <a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton/issues/">open a Triton issue</a>.</p>
+<p><em>This post has been updated with minor corrections, changes be found in
+git history.</em></p>
+</p>
+
+    <p class="ablog-post-expand"><a href="../../../2023/preparing-for-new-triton/"><em>Read more ...</em></a></p>
+    <hr/>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h1 style="text-align: center; margin-top: 0px">
+  <a href="../../../">Aalto Scientific Computing Blog</a>
+</h1>
+<ul>
+<li><a href="https://scicomp.aalto.fi">Home</a></li>
+<li><a href="../../atom.xml">Blog feed</a></li>
+<li><a href="https://fosstodon.org/@SciCompAalto">Mastodon</a></li>
+<li><a href="https://twitter.com/SciCompAalto">Twitter</a></li>
+</ul>
+<div class="ablog-sidebar-item ablog__recentposts">
+<h3>
+  <a href="../../">Recent Posts</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../../../2024/rse-funding/">
+      21 February - Research Software Engineer project funding: what’s been working
+    </a>
+  </li>
+  
+  <li>
+    <a href="../../../2024/kickstart-2023-wrap-up/">
+      15 February - Kickstart 2023 wrap-up and thoughts for the future
+    </a>
+  </li>
+  
+  <li>
+    <a href="../../../2023/dev-day-2023-aug/">
+      30 October - ASC development day, 2023 August
+    </a>
+  </li>
+  
+  <li>
+    <a href="../../../2023/webp-security-vulnerability/">
+      28 September - libwebp security vulnerability and computational scientists
+    </a>
+  </li>
+  
+  <li>
+    <a href="../../../2023/ssh-keys-with-passwords/">
+      27 September - Aalto public servers requiring passwords with SSH keys
+    </a>
+  </li>
+  
+</ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__category">
+<h3>
+  <a href="../">Categories</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="..//"> (2)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../ai/">AI (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../asc/">ASC (4)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../rse/">RSE (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../aalto/">aalto (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../python/">python (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../rse/">rse (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../software/">software (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../ssh/">ssh (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../teaching/">teaching (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="#">triton (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../whisper/">whisper (1)</a>
+  </li>
+  
+  
+</ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__archive">
+<h3>
+  <a href="../../archive/">Archives</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../../2024/">2024 (2)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../2023/">2023 (9)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../2021/">2021 (1)</a>
+  </li>
+  
+  
+</ul>
+</div>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021-2023, Aalto Scientific Computing.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
