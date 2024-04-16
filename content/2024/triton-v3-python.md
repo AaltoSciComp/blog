@@ -2,7 +2,7 @@
 blogpost: true
 date: 2024-04-16
 author: Richard Darst
-category: teaching
+category: triton, triton-v3, python, jupyter
 ---
 
 # Triton v3: Python and Jupyter
