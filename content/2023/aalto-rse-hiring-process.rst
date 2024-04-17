@@ -86,6 +86,12 @@ than two pages is typical.  But if it's engaging, we'll read as much
 as you write.  Remember, most important information first, don't make
 us hunt for things.
 
+Update 2024: Do you want to use AI to write your cover letter?  Please
+think again.  Since LLMs became a thing, cover letters have become
+harder to read, longer, and more generic-sounding.  It's better to
+write in your own voice and be shorter than rely on what AI gives
+you.
+
 
 The rest of the job application
 -------------------------------
