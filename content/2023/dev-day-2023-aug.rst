@@ -68,7 +68,7 @@ also to get good quality video recordings for the future).
 Goals:
 
 * Developing and delivering the ":external:doc:`workflows
-  <training/scip/ttt4hpc-2024>`" course with CodeRefinery
+  <training/scip/workflows-2024>`" course with CodeRefinery
 * Short courses to record (e.g. rerun of debug series, once a week,
   record and publish).
 * Update :external:doc:`triton/usage/debugging` linking the
