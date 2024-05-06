@@ -32,7 +32,7 @@ password by pretending to be Triton.  This is a good thing.
 
 OpenSSH (the command line program on Linux, MacOS, Windows) saves
 these connection IDs (fingerprints) in
-``$HOME/.ssh/authorized_keys``.  Other programs may store the keys
+``$HOME/.ssh/known_hosts``.  Other programs may store the keys
 somewhere else.
 
 
