@@ -1,7 +1,7 @@
 :blogpost: true
 :date: 2023-04-26
 :author: Richard Darst
-:category:
+:category: teaching
 
 
 SciComp Kickstart - 2023 plans and yearly strategy
