@@ -11,6 +11,8 @@ Triton has a major update.  You can read our previous info about this at
 :doc:`/2023/preparing-for-new-triton`, and our "what has changed" in
 `Triton issue #1593 <https://version.aalto.fi/gitlab/AaltoScienceIT/triton/-/issues/1593>`__.
 
+You might get :doc:`SSH host key warnings</2024/ssh-host-key-warnings>`.
+
 
 What is Triton v3
 -----------------
