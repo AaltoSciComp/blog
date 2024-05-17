@@ -106,13 +106,13 @@ fit in.  So small jobs usually get scheduled fast regardless.
 really want to know the details.  Summary at the end.*
 
 What's a share?  Currently shares are based on department and their
-respective funding of Triton (``sshare``).  Shares are shared among
-everyone in the department, but each person has their own priority.
-Thus, for medium users, the 2-week usage of the rest of your
-department can affect how fast your jobs run.  However, again, things
-are balanced per-user within departments.  (However, one heavy user in
-a department can affect all others in that department a bit too much,
-we are working on this)
+respective funding of Triton (``sshare``).  It used to be that
+departments had a share, and then each member had a share of that
+department.  But for complex reasons we have changed it so that it's
+flat: so that each person has a share, and the shares of everyone in a
+department corresponds to that department's share.  When you are below
+your share (relative to everyone else), you have higher priority, and
+vice versa.
 
 Your priority goes down via the "job billing": roughly time×power.
 CPUs are billed at 1/s (but older, less powerful CPUs cost less!).
@@ -171,7 +171,10 @@ priorities:
    ``slurm p gpu``       |     # shows partition parameters incl. Priority=
 
 
-tl;dr: Just select the resources you think you need, and slurm
+Summary
+-------
+
+tl;dr: Just select the resources you think you need, and Slurm
 tries to balance things out so everyone gets their share.  The best
 way to maintain high priority is to use resources efficiently so you
 don't need to over-request.
