@@ -45,9 +45,9 @@ our mission of helping the researchers who need us most.
 Future funding prospects
 ------------------------
 
-For any **long projects** (more than a month or so), we still follow
-do our original plan: we can receive funding from grants (or basic
-funding) to do long-term projects.  This is usually 40-80% of a RSE's
+For any **long-term projects** (more than a month or so), we still follow
+our original plan: we can receive funding from grants (or basic
+funding) to do long-term projects.  This is usually 40-80% of an RSE's
 time, spread out over more than a month (and it can also be bursty:
 lots of work at some times, waiting for the next task at other times).
 We have done this for projects, and we know we can do it in the
@@ -55,7 +55,7 @@ future.
 
 But there's another thing that has worked well: **retainer**-type
 funding instead of project-based funding.  You have extra funding that
-needs to be used?  You know your group needs support but you can't
+needs to be used?  You know your group needs support, but you can't
 name a single specific project to use all the time?  Hire RSEs on
 long-term retainers and we're there for you as needed.  **You will
 always get priority for all the quick questions you have** (in
@@ -77,7 +77,7 @@ know:** :external:doc:`rse/index` or :external:doc:`rse/how-we-work`.
 Why are our projects so short?
 ------------------------------
 
-This is a valid questions.  Compared to many RSE groups, we seem to be
+This is a valid question.  Compared to many RSE groups, we seem to be
 focusing on many small questions for a broad audience that knows a lot
 about the problems they need to solve.  Thus, we can come in to
 something already set up well, provide help, and mostly back off and
