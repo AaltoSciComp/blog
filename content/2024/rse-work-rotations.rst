@@ -25,6 +25,7 @@ find hiring resources on :external:doc:`the Aalto RSE page
 <rse/index>` and some brief thoughts in the companion post
 :doc:`/2024/rse-collaboration`.
 
+Let's say you have hired someone.  What's next?
 
 
 An apprenticeship proposal
@@ -34,8 +35,11 @@ This proposal is much easier for someone inside of Aalto University
 than outside, but possibly could be negotiated for others.
 
 - Your new hire works as part of the existing School of Science RSE
-  team initially, perhaps ~1 year.  The hire is paid,
-  organizationally supervised in, and sits in your own unit.
+  team initially, perhaps ~1 year.
+- The hire is paid, organizationally supervised in, and sits in your
+  own unit.  It is absolutely critical that they maintain close
+  connections to your own unit, the membership in our team is only
+  virtual.  (Our team is remote-first, so this is easy).
 - They focus on projects from your own unit, but as part of our daily
   flow.  This could mean asking your audience to join our
   :external:doc:`help/garage` for help and requesting that new big

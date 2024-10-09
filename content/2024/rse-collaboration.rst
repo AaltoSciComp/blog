@@ -91,10 +91,13 @@ However, without funding, Aalto needs to focus on its own work.
 Collaboration possibilities: with funding
 -----------------------------------------
 
+With joint funding, it might be possible to make a collaboration.
+
 Any higher level collaboration needs to be discussed with management.
 Assuming these discussions go well, we might join a collaboration
 together so that we can actually share projects between the team.
-This opens more possibilities.
+There should always be a strong local presence, because
+that gets the best value.  This opens more possibilities.
 
 The more experienced or larger teams could provide:
 
