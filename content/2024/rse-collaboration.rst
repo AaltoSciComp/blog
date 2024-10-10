@@ -60,8 +60,10 @@ of more advanced projects as work advances.
 .. figure:: https://github.com/AaltoSciComp/aaltoscicomp-graphics/blob/master/figures/rse-types.png?raw=true
    :alt: Two by two grid with axes generalist/specialist and wide/local audience
 
-   A possible categorization of research engineers.  Where do you want
-   to fit in here?
+   A possible categorization of research engineers roles.  Where do
+   you want your hire to fit in here?  (This is not designed to
+   classify people, it's designed to plan how people might be
+   located.)
 
 
 
