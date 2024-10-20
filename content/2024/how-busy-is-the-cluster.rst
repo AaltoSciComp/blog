@@ -1,5 +1,5 @@
 :blogpost: true
-:date: 2024-04-18
+:date: 2024-10-21
 :author: Richard Darst
 :category: triton
 
@@ -39,16 +39,42 @@ Priority comparison
 You can compare your fairshare factor with other users.  If you run
 ``sshare`` you can see the fairshare (higher means higher priority).
 ``sprio`` shows relatively priority for all jobs (here, the raw values
-are multiplied by some factor and added).  On Triton, the "age" value
-is "1e7 × (1-(time_in_queue/7day))" (but maxes out at 7 days) (zero
-when first submitted, increasing to 10000 at 7 days old), and the
-fairshare factor is 1e7.  The others are mostly constant.
+are multiplied by some factor and added).  On Triton (the new install
+since 2024 may), they mean the following:
+
+* The "age" value is "1e4 × (1-(time_in_queue/7day))" (but maxes out
+   at 7 days) (zero when first submitted, increasing to 10000 at 7
+   days old)
+* The fairshare factor is "1e7 × FairShare priority from sshare"
+
+  * The FairShare value is computed based on the raw usage value: at
+    each level of the share tree, it divides it up among the users so
+    that those who have run less have a higher priority.
+
+  * The usage value decays with a two-week half life.
+
+* The others are mostly constant.
 
 Still: this is all very abstract and what others submit has more
-effect than your priority.
+effect than your priority.  The only thing you can control is using
+less resources.
 
 This is quite cluster dependent so we'd recommend asking for help for
 how your own cluster is setup.
+
+
+How to get jobs scheduled sooner
+--------------------------------
+
+This may be your real question. There are two main things:
+
+*  Use less resources.  **Make sure you don't over-request more than
+  you need (CPU, memory, GPUs)** - this will affect your future
+  fairshare less. Of course, use everything you need, "saving for
+  later" doesn't give you more resources than you save now.
+
+* Request less resources per job.  This will let you be backfilled
+  into the scheduling holes (see below).
 
 
 When the cluster is mostly empty
@@ -88,7 +114,8 @@ Long, older description
 -----------------------
 
 This description was in an old version of our docs but has since been
-removed.  So pasting here:
+removed.  The exact values are out of date.  It's included here for
+detailed reference anyway:
 
 
 Triton queues are not first-in first-out, but "fairshare".  This means
