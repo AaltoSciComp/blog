@@ -68,7 +68,7 @@ How to get jobs scheduled sooner
 
 This may be your real question. There are two main things:
 
-*  Use less resources.  **Make sure you don't over-request more than
+* Use less resources.  **Make sure you don't over-request more than
   you need (CPU, memory, GPUs)** - this will affect your future
   fairshare less. Of course, use everything you need, "saving for
   later" doesn't give you more resources than you save now.
