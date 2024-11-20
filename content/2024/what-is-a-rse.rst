@@ -1,5 +1,5 @@
 :blogpost: true
-:date: 2024-10-23
+:date: 2024-11-20
 :author: Richard Darst
 :category: rse
 
@@ -60,8 +60,8 @@ undergraduate → junior researcher → senior researcher).  At all
 levels, I've seen research engineering under-valued and under-taught
 (not necessarily because it's not wanted, but because it's not novel
 science and there's no time).  Senior researchers (group leaders)
-often see the value, but don't have the ability to train and supervise
-research engineers well.
+often see the value, but don't have the time (or sometimes ability) to
+train and supervise research engineers well.
 
 
 
@@ -155,6 +155,8 @@ you want to approach the problem:
     research engineer).  We can fill in the technical mentoring that's
     missing by many supervisors.
 
+  * You can read about :external:doc:`our history <rse/history>` in
+    more detail.
 
 
 Getting your own research engineers
