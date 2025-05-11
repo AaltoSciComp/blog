@@ -37,9 +37,8 @@ work, but their scale means they have more emphasis on large projects.
 Many of their staff are assigned to various projects for months at a
 time (usually more than one project, but not too many - actual
 day-to-day time allocation is decided based on what works for each
-project).https://www.ucl.ac.uk/advanced-research-computing/collaborations-and-consultancy
-Many projects have a more senior and junior staff member working
-together, or at least aware of the work.
+project).  Many projects have a more senior and junior staff member
+working together, or at least aware of the work.
 
 Other sides of ARC are platforms & services (HPC and many more
 research-focused IT services) and teaching/training.  Overall, ARC and
