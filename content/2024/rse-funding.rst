@@ -1,7 +1,7 @@
 :blogpost: true
 :date: 2024-02-21
 :author: Richard Darst
-:category: RSE
+:category: rse
 
 
 Research Software Engineer project funding: what's been working
