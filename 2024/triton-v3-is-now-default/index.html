@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Triton v3 is now default" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aaltoscicomp.github.io/blog/2024/triton-v3-is-now-default/" />
+<meta property="og:site_name" content="Aalto SciComp Blog" />
+<meta property="og:description" content="Triton has a major update. You can read our previous info about this at Preparing for new Triton, and our “what has changed” in Triton issue #1593. You might get SSH host key warnings. What is Trit..." />
+<meta property="og:image" content="https://scicomp.aalto.fi/_static/asc-socialshare-02.png" />
+<meta property="og:image:alt" content="ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training." />
+<meta name="description" content="Triton has a major update. You can read our previous info about this at Preparing for new Triton, and our “what has changed” in Triton issue #1593. You might get SSH host key warnings. What is Trit..." />
+<meta property="twitter:creator" content="@SciCompAalto" />
+
+    <title>Triton v3 is now default &#8212; Aalto Scientific Computing Blog  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script data-domain="aaltoscicomp.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <link rel="icon" href="../../_static/logo-hexagons-02-compact.svg.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Aalto Scientific Computing Blog"
+/>
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="triton-v3-is-now-default">
+<h1>Triton v3 is now default<a class="headerlink" href="#triton-v3-is-now-default" title="Link to this heading"></a></h1>
+<p>Triton has a major update.  You can read our previous info about this at
+<a class="reference internal" href="../../2023/preparing-for-new-triton/"><span class="doc">Preparing for new Triton</span></a>, and our “what has changed” in
+<a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton/-/issues/1593">Triton issue #1593</a>.</p>
+<p>You might get <a class="reference internal" href="../ssh-host-key-warnings/"><span class="doc">SSH host key warnings</span></a>.</p>
+<section id="what-is-triton-v3">
+<h2>What is Triton v3<a class="headerlink" href="#what-is-triton-v3" title="Link to this heading"></a></h2>
+<p>It has the same name, and importantly the same user accounts and data,
+but all the software and operating system is changed.  In particular:</p>
+<ul class="simple">
+<li><p>All software modules are different</p></li>
+<li><p>Any software which has been complied will need to be re-compiled.</p></li>
+</ul>
+</section>
+<section id="why-and-why-now">
+<h2>Why, and why now?<a class="headerlink" href="#why-and-why-now" title="Link to this heading"></a></h2>
+<p>Triton’s previous operating system was released in 2014.  Security
+support runs out at the end of 2024 May, and it <em>has</em> to be updated.
+Stability is good for research, so we try to reduce the number of
+changes (compare)</p>
+<p>We realize that a change is very disruptive and painful, especially
+since the expectation is that Triton never changes.  But an old
+operating system makes problem for users too, and they have gotten
+more and more over the years.</p>
+</section>
+<section id="what-to-do">
+<h2>What to do<a class="headerlink" href="#what-to-do" title="Link to this heading"></a></h2>
+<p>Most of the transition for different types of software is described in
+<a class="reference external" href="https://version.aalto.fi/gitlab/AaltoScienceIT/triton/-/issues/1593">Triton issue #1593</a>.</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+      Previous:
+    
+    <a href="../ssh-host-key-warnings/">
+      
+      <span>Triton v3 SSH host key warnings</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+      Next: 
+    <a href="../rse-collaboration/">
+      <span>Future RSE collaboration in Finland</span>
+      
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><h1 style="text-align: center; margin-top: 0px">
+  <a href="../../">Aalto Scientific Computing Blog</a>
+</h1>
+<ul>
+<li><a href="https://scicomp.aalto.fi">Home</a></li>
+<li><a href="../../blog/atom.xml">Blog feed</a></li>
+<li><a href="https://fosstodon.org/@SciCompAalto">Mastodon</a></li>
+<li><a href="https://twitter.com/SciCompAalto">Twitter</a></li>
+</ul>
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <span>2024 May 06</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+       Author: 
+    </span>
+     
+    <a href="../../blog/author/richard-darst/">Richard Darst</a>
+      
+  </li>
+     
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+       Category: 
+    </span>
+     
+    <a href="../../blog/category/triton/">triton</a>
+      
+  </li>
+    
+</div>
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../blog/">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../2025/ucl-rse-visit/">
+        08 May - RSE report from visiting University College London Advanced Research Computing
+      </a>
+    </li>
+    
+    <li>
+      <a href="../what-is-a-rse/">
+        20 November - What is a Research Software Engineer?
+      </a>
+    </li>
+    
+    <li>
+      <a href="../how-busy-is-the-cluster/">
+        21 October - How busy is the cluster?  A discussion
+      </a>
+    </li>
+    
+    <li>
+      <a href="../rse-work-rotations/">
+        08 October - RSE work rotations
+      </a>
+    </li>
+    
+    <li>
+      <a href="../rse-collaboration/">
+        08 October - Future RSE collaboration in Finland
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../../blog/category/">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/category/ai/">AI (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/asc/">ASC (4)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/aalto/">aalto (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/python/">python (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/rse/">rse (6)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/security/">security (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/software/">software (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/ssh/">ssh (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/teaching/">teaching (2)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/triton/">triton (5)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/whisper/">whisper (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../blog/archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/2025/">2025 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2024/">2024 (8)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2023/">2023 (9)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2021/">2021 (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021-2023, Aalto Scientific Computing.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/2024/triton-v3-is-now-default.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

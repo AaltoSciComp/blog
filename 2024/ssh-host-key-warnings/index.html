@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Triton v3 SSH host key warnings" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aaltoscicomp.github.io/blog/2024/ssh-host-key-warnings/" />
+<meta property="og:site_name" content="Aalto SciComp Blog" />
+<meta property="og:description" content="When updating Triton, many users will get a message like this (or similar things if you use other SSH clients like PuTTY): What it means: SSH (Secure SHell) is made to be secure, and that means one..." />
+<meta property="og:image" content="https://scicomp.aalto.fi/_static/asc-socialshare-02.png" />
+<meta property="og:image:alt" content="ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training." />
+<meta name="description" content="When updating Triton, many users will get a message like this (or similar things if you use other SSH clients like PuTTY): What it means: SSH (Secure SHell) is made to be secure, and that means one..." />
+<meta property="twitter:creator" content="@SciCompAalto" />
+
+    <title>Triton v3 SSH host key warnings &#8212; Aalto Scientific Computing Blog  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script data-domain="aaltoscicomp.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <link rel="icon" href="../../_static/logo-hexagons-02-compact.svg.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Aalto Scientific Computing Blog"
+/>
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="triton-v3-ssh-host-key-warnings">
+<h1>Triton v3 SSH host key warnings<a class="headerlink" href="#triton-v3-ssh-host-key-warnings" title="Link to this heading"></a></h1>
+<p>When updating Triton, many users will get a message like this (or
+similar things if you use other SSH clients like PuTTY):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+</pre></div>
+</div>
+<section id="what-it-means">
+<h2>What it means<a class="headerlink" href="#what-it-means" title="Link to this heading"></a></h2>
+<p>SSH (Secure SHell) is made to be secure, and that means one it
+verifies the server you are connecting <strong>to</strong> via its <strong>ssh host
+key</strong>.  The representation of this key is the <strong>fingerprint</strong>, like
+<code class="docutils literal notranslate"><span class="pre">SHA256:OqCehC2lbHdl8mYGI/G9vlxTwew3H3KrvxKDkwIQy9Y</span></code>.  This means
+that the NSA or someone can’t intercept the connecting and get your
+password by pretending to be Triton.  This is a good thing.</p>
+<p>OpenSSH (the command line program on Linux, MacOS, Windows) saves
+these connection IDs (fingerprints) in
+<code class="docutils literal notranslate"><span class="pre">$HOME/.ssh/known_hosts</span></code>.  Other programs may store the keys
+somewhere else.</p>
+</section>
+<section id="what-you-should-do-when-you-see-the-warning">
+<h2>What you should do when you see the warning<a class="headerlink" href="#what-you-should-do-when-you-see-the-warning" title="Link to this heading"></a></h2>
+<p>The warning looks scary but the first thing to ask is “should the
+server I am connecting to have changed?”.  If you have been directed
+to this blog post, then probably yes, it has.  You should <em>always</em>
+think if the fingerprint should change, and if there is no reason for
+them to have changed, contact your administrators.  You can usually
+verify the keys online, for example
+<a class="reference external" href="https://scicomp.aalto.fi/triton/usage/ssh-fingerprints/" title="(in Aalto Scientific Computing)"><span>Triton ssh key fingerprints</span></a>.</p>
+<p>If you are on command line OpenSSH (Linux), it will propose a command
+that will remove the old host key:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh-keygen<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;triton.aalto.fi&quot;</span>
+</pre></div>
+</div>
+<p>For other programs, follow whatever prompts it might give to replace
+the host key fingerprint.</p>
+</section>
+<section id="what-are-the-current-ssh-keys">
+<h2>What are the current SSH keys?<a class="headerlink" href="#what-are-the-current-ssh-keys" title="Link to this heading"></a></h2>
+<p>When you get a “The authenticity of host ‘triton.aalto.fi’ can’t be
+established”, verify the SSH key fingerprints that are presented, then
+click “yes” to permanently save them (until they change next, they can
+always be updated).  The fingerprints for Triton v3 are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3072</span> <span class="n">SHA256</span><span class="p">:</span><span class="mi">3</span><span class="n">u8iICwjmvJ</span><span class="o">/+</span><span class="mi">9</span><span class="n">YGxqqK</span><span class="o">+</span><span class="mi">3</span><span class="n">r7FmrDflcgpoGl5ygtAWw</span> <span class="n">login4</span><span class="o">.</span><span class="n">triton</span><span class="o">.</span><span class="n">aalto</span><span class="o">.</span><span class="n">fi</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+<span class="mi">256</span> <span class="n">SHA256</span><span class="p">:</span><span class="n">OqCehC2lbHdl8mYGI</span><span class="o">/</span><span class="n">G9vlxTwew3H3KrvxKDkwIQy9Y</span> <span class="n">login4</span><span class="o">.</span><span class="n">triton</span><span class="o">.</span><span class="n">aalto</span><span class="o">.</span><span class="n">fi</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+<span class="mi">256</span> <span class="n">SHA256</span><span class="p">:</span><span class="n">ibL4dBsdrwRjbJCBWL1J5p</span><span class="o">/</span><span class="n">Sg4PGHWxTG6HF65yPcps</span> <span class="n">login4</span><span class="o">.</span><span class="n">triton</span><span class="o">.</span><span class="n">aalto</span><span class="o">.</span><span class="n">fi</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+      Previous:
+    
+    <a href="../rse-funding/">
+      
+      <span>Research Software Engineer project funding: what’s been working</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+      Next: 
+    <a href="../triton-v3-is-now-default/">
+      <span>Triton v3 is now default</span>
+      
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><h1 style="text-align: center; margin-top: 0px">
+  <a href="../../">Aalto Scientific Computing Blog</a>
+</h1>
+<ul>
+<li><a href="https://scicomp.aalto.fi">Home</a></li>
+<li><a href="../../blog/atom.xml">Blog feed</a></li>
+<li><a href="https://fosstodon.org/@SciCompAalto">Mastodon</a></li>
+<li><a href="https://twitter.com/SciCompAalto">Twitter</a></li>
+</ul>
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <span>2024 May 06</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+       Author: 
+    </span>
+     
+    <a href="../../blog/author/richard-darst/">Richard Darst</a>
+      
+  </li>
+     
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+       Category: 
+    </span>
+     
+    <a href="../../blog/category/triton/">triton</a>
+      
+  </li>
+    
+</div>
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../blog/">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../2025/ucl-rse-visit/">
+        08 May - RSE report from visiting University College London Advanced Research Computing
+      </a>
+    </li>
+    
+    <li>
+      <a href="../what-is-a-rse/">
+        20 November - What is a Research Software Engineer?
+      </a>
+    </li>
+    
+    <li>
+      <a href="../how-busy-is-the-cluster/">
+        21 October - How busy is the cluster?  A discussion
+      </a>
+    </li>
+    
+    <li>
+      <a href="../rse-work-rotations/">
+        08 October - RSE work rotations
+      </a>
+    </li>
+    
+    <li>
+      <a href="../rse-collaboration/">
+        08 October - Future RSE collaboration in Finland
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../../blog/category/">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/category/ai/">AI (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/asc/">ASC (4)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/aalto/">aalto (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/python/">python (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/rse/">rse (6)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/security/">security (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/software/">software (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/ssh/">ssh (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/teaching/">teaching (2)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/triton/">triton (5)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/whisper/">whisper (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../blog/archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/2025/">2025 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2024/">2024 (8)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2023/">2023 (9)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2021/">2021 (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021-2023, Aalto Scientific Computing.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/2024/ssh-host-key-warnings.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

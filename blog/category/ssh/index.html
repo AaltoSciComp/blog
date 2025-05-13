@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts in ssh &#8212; Aalto Scientific Computing Blog  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script data-domain="aaltoscicomp.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <link rel="icon" href="../../../_static/logo-hexagons-02-compact.svg.ico"/>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="Posts in ssh"
+/>
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             
+<div class="section ablog__collection">
+  <h1>
+    
+    <span
+      >Posts in  ssh 
+    </span>
+  </h1>
+   
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
+      <a href="../../../2023/ssh-keys-with-passwords/">Aalto public servers requiring passwords with SSH keys</a>
+    </h2>
+    <ul class="ablog-archive">
+      <li>
+         
+        <span>2023 Sep 27</span>
+        
+      </li>
+      <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+       Author: 
+    </span>
+     
+    <a href="../../author/richard-darst/">Richard Darst</a>
+      
+  </li>
+     
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+       Category: 
+    </span>
+     
+    <a href="../aalto/">aalto</a>
+     ,    
+    <a href="#">ssh</a>
+      
+  </li>
+    
+</div>
+    </ul>
+    <p class="ablog-post-excerpt"><p>From 2023-09-25, publicly accessible Aalto server login is changing
+and will now require a password in addition to SSH keys.  This will
+have a significant usability impact on some users.  This post is made
+as a landing page for users who need immediate, practical help and for
+whom the <a class="reference external" href="https://www.aalto.fi/en/news/ssh-connections-to-public-linux-servers-from-outside-the-aalto-network-will-require-both-a-password">aalto.fi page</a>
+isn’t findable or detailed enough.  The official contact is the <a class="reference external" href="https://www.aalto.fi/en/services/it-service-desk-contact-information-and-service-hours">IT
+Services service desk</a></p>
+<p>The reference page <a class="reference external" href="https://scicomp.aalto.fi/scicomp/ssh/" title="(in Aalto Scientific Computing)"><span>SSH</span></a> has been updated to
+include detailed reference information for every common operating
+system and SSH client.  Secure Shell is one of the standard methods of
+connecting to remote servers and it is important that users of all
+skill levels are able to use it securely.</p>
+<p>This change is <em>not</em> from Science-IT, but since it will affect many of
+our users but is not being publicized or supported very much, we are
+preemptively doing some major user support.</p>
+<p>What is <strong>not</strong> happening is: requiring locally encrypted SSH keys (although this is highly recommended).</p>
+<p>What <strong>is</strong> happening: When you connect to an SSH server from outside
+Aalto networks, you will need to have an SSH key set up <strong>and</strong> send
+your Aalto password to the remote server interactively.</p>
+<p>If you already have an SSH key set up, you’ll start to be asked to
+enter a password every time you connect.</p>
+<p>You can always connect to the Aalto VPN in advance to prevent this,
+but there may be cases where this isn’t a practical solution.</p>
+<p>If you do not have an SSH key set up, you should:</p>
+<p>Follow <a class="reference external" href="https://scicomp.aalto.fi/scicomp/ssh/" title="(in Aalto Scientific Computing)"><span>SSH</span></a> to generate an SSH key - we have
+<em>heavily</em> revised this page to cover almost every common SSH
+arrangement.</p>
+<p>Place your SSH key on any common Aalto server (<code class="docutils literal notranslate"><span class="pre">kosh</span></code>, etc. -
+<em>not</em> Triton since that doesn’t share home directories with the
+public servers)</p>
+<p>You could connect by VPN, and then use normal password to connect
+and add the key.</p>
+<p>You could use <a class="reference external" href="https://vdi.aalto.fi">https://vdi.aalto.fi</a> with a Linux computer to place
+the key.</p>
+<p>You could place the key while on an Aalto network (as usual, this
+means <code class="docutils literal notranslate"><span class="pre">eduroam</span></code> or <code class="docutils literal notranslate"><span class="pre">aalto</span></code> <em>only</em> from an Aalto computer).</p>
+<p>You could use another computer that’s already set up with an SSH
+key to place the key.</p>
+<p>The key will then be available on all common Aalto shell servers
+(and other workstations), since they share the home directory.</p>
+<p>Re-read <a class="reference external" href="https://scicomp.aalto.fi/scicomp/ssh/" title="(in Aalto Scientific Computing)"><span>SSH</span></a>, in particular the
+<a class="reference external" href="https://scicomp.aalto.fi/scicomp/ssh/#ssh-agent" title="(in Aalto Scientific Computing)"><span>SSH key agent</span></a>, <a class="reference external" href="https://scicomp.aalto.fi/scicomp/ssh/#proxyjump" title="(in Aalto Scientific Computing)"><span>ProxyJump</span></a> and
+<a class="reference external" href="https://scicomp.aalto.fi/scicomp/ssh/#ssh-multiplex" title="(in Aalto Scientific Computing)"><span>Multiplexing</span></a> sections, to see how to configure your
+SSH to minimize the number of times you need to enter passwords.</p>
+<p>This was needed for security as evidenced by recent history.
+Password-only login is simply not feasible anymore (nor for some
+time).  Removing passwords as an option is good security practice that
+most organizations should adopt these days.</p>
+<p>But why an ssh key <em>and</em> remote password instead of a properly
+encrypted SSH key?  An SSH key requires something you have (the key)
+and something you know (the password), doesn’t it?  And doesn’t
+require sending a plaintext password to the remote server.  This was
+decided by whoever is setting this up, probably partly due to the
+fact that it is not possible to enforce passwords on SSH keys via
+the server config.</p>
+<p>In general (outside of Aalto), you should use SSH keys everywhere and
+be wary of ever sending plaintext passwords to remote servers
+(even in conjunction with an SSH key).  Security is important, and by
+using SSH keys with local encryption of the key you are doing your part.</p>
+<p>We apologize for the difficulty in getting work done and want to help
+you as much as possible (though Science-IT was <em>not</em> the ones that
+designed this or communicated it).</p>
+<p>There are, unfortunately, some trivial workarounds that involve
+putting your password in plain text on your computer to script things.
+However, please note that writing passwords down (outside of password
+managers) is bad security practise and against the <a class="reference external" href="https://www.aalto.fi/en/services/password-guidelines">Aalto password guidelines</a>. It is better to
+<a class="reference external" href="https://scicomp.aalto.fi/help/garage/" title="(in Aalto Scientific Computing)"><span class="xref std std-doc">contact us</span></a> to
+help design a better and more secure workflow, or ask <a class="reference external" href="https://www.aalto.fi/en/services/it-services">IT Services</a> and ask them to
+consider other use cases.</p>
+</p>
+
+    <p class="ablog-post-expand">
+      <a href="../../../2023/ssh-keys-with-passwords/"><em>Read more ...</em></a>
+    </p>
+    <hr />
+  </div>
+   
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><h1 style="text-align: center; margin-top: 0px">
+  <a href="../../../">Aalto Scientific Computing Blog</a>
+</h1>
+<ul>
+<li><a href="https://scicomp.aalto.fi">Home</a></li>
+<li><a href="../../atom.xml">Blog feed</a></li>
+<li><a href="https://fosstodon.org/@SciCompAalto">Mastodon</a></li>
+<li><a href="https://twitter.com/SciCompAalto">Twitter</a></li>
+</ul>
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../../2025/ucl-rse-visit/">
+        08 May - RSE report from visiting University College London Advanced Research Computing
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../../2024/what-is-a-rse/">
+        20 November - What is a Research Software Engineer?
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../../2024/how-busy-is-the-cluster/">
+        21 October - How busy is the cluster?  A discussion
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../../2024/rse-work-rotations/">
+        08 October - RSE work rotations
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../../2024/rse-collaboration/">
+        08 October - Future RSE collaboration in Finland
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../ai/">AI (1)</a>
+    </li>
+      
+    <li>
+      <a href="../asc/">ASC (4)</a>
+    </li>
+      
+    <li>
+      <a href="../aalto/">aalto (1)</a>
+    </li>
+      
+    <li>
+      <a href="../python/">python (1)</a>
+    </li>
+      
+    <li>
+      <a href="../rse/">rse (6)</a>
+    </li>
+      
+    <li>
+      <a href="../security/">security (1)</a>
+    </li>
+      
+    <li>
+      <a href="../software/">software (1)</a>
+    </li>
+      
+    <li>
+      <a href="#">ssh (1)</a>
+    </li>
+      
+    <li>
+      <a href="../teaching/">teaching (2)</a>
+    </li>
+      
+    <li>
+      <a href="../triton/">triton (5)</a>
+    </li>
+      
+    <li>
+      <a href="../whisper/">whisper (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../2025/">2025 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../2024/">2024 (8)</a>
+    </li>
+      
+    <li>
+      <a href="../../2023/">2023 (9)</a>
+    </li>
+      
+    <li>
+      <a href="../../2021/">2021 (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021-2023, Aalto Scientific Computing.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="ASC development day, 2023 August" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aaltoscicomp.github.io/blog/2023/dev-day-2023-aug/" />
+<meta property="og:site_name" content="Aalto SciComp Blog" />
+<meta property="og:description" content="We had another development day (previous: ASC development day, 2023 March). It went mostly like the last one, and we have less important news for the world, but below is the summary anyway. Stats: ..." />
+<meta property="og:image" content="https://scicomp.aalto.fi/_static/asc-socialshare-02.png" />
+<meta property="og:image:alt" content="ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training." />
+<meta name="description" content="We had another development day (previous: ASC development day, 2023 March). It went mostly like the last one, and we have less important news for the world, but below is the summary anyway. Stats: ..." />
+<meta property="twitter:creator" content="@SciCompAalto" />
+
+    <title>ASC development day, 2023 August &#8212; Aalto Scientific Computing Blog  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script data-domain="aaltoscicomp.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <link rel="icon" href="../../_static/logo-hexagons-02-compact.svg.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Aalto Scientific Computing Blog"
+/>
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="asc-development-day-2023-august">
+<h1>ASC development day, 2023 August<a class="headerlink" href="#asc-development-day-2023-august" title="Link to this heading"></a></h1>
+<p>We had another development day (previous:
+<a class="reference internal" href="../march-development-day/"><span class="doc">ASC development day, 2023 March</span></a>).  It went mostly like the last one, and
+we have less important news for the world, but below is the summary
+anyway.</p>
+<section id="stats">
+<h2>Stats<a class="headerlink" href="#stats" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>We have about 1550 people with accounts, with 202 new account
+requests in the last six months.</p></li>
+<li><p>Most routine issues tend to be about software installation, which is
+good (this is the actually hard part, it’s good people ask us).</p></li>
+<li><p>We are still on track for about 500 garage visits per year.  We
+don’t try too hard to keep track of them all, we might get about 75%
+of them.</p></li>
+<li><p>The number of <a class="reference external" href="https://scicomp.aalto.fi/triton/tut/interactive/" title="(in Aalto Scientific Computing)"><span class="xref std std-doc">interactive</span></a>
+and <a class="reference external" href="https://scicomp.aalto.fi/triton/apps/jupyter/" title="(in Aalto Scientific Computing)"><span class="xref std std-doc">Jupyter</span></a> users are increasing, while
+<a class="reference external" href="https://scicomp.aalto.fi/triton/usage/ood/" title="(in Aalto Scientific Computing)"><span class="xref std std-doc">Open OnDemand</span></a> is decreasing.  This
+is the wrong direction from what we’d like.  We will open
+OOD to connections from all of Finland to make this easier.</p></li>
+</ul>
+</section>
+<section id="triton-v3">
+<h2>Triton v3<a class="headerlink" href="#triton-v3" title="Link to this heading"></a></h2>
+<p>Triton v3 is still on the way.  This isn’t a new cluster, but a new
+operating system which individual nodes will be migrated to slowly
+(while maintaining the same accounts and data).  Most of this happens
+in the background, but the change of base operating system images will
+require most code to be recompiled, which will require attention
+from many users.  The transition can be made slowly, both old and new
+OSs will run for a time being.  There won’t be a change in total
+amount of computing power.</p>
+<p>An upcoming blog post will discuss this more, and the effects on
+users.  <em>Now is the time to start preparing.</em>  We still expect the
+transition to happen sometime in the autumn.</p>
+<p>We are thinking to merge home and scratch directories, to make a
+common quota for both.  This would improve usability by reducing the
+frequency of home quota affecting usage.  We’d welcome any other
+usability suggestions.</p>
+<p>Practically, we are using the chance to automate things even more,
+which should make it easier to manage in the future.</p>
+</section>
+<section id="teaching">
+<h2>Teaching<a class="headerlink" href="#teaching" title="Link to this heading"></a></h2>
+<p>Teaching has gone well.  For this academic year, we’d like to add back
+in a few smaller, special-purpose courses (not just to teach them, but
+also to get good quality video recordings for the future).</p>
+<p>Goals:</p>
+<ul class="simple">
+<li><p>Developing and delivering the “<a class="reference external" href="https://scicomp.aalto.fi/training/scip/ttt4hpc-2024/" title="(in Aalto Scientific Computing)"><span class="xref std std-doc">workflows</span></a>” course with CodeRefinery</p></li>
+<li><p>Short courses to record (e.g. rerun of debug series, once a week,
+record and publish).</p></li>
+<li><p>Update <a class="reference external" href="https://scicomp.aalto.fi/triton/usage/debugging/" title="(in Aalto Scientific Computing)"><span>Debugging</span></a> linking the
+different debugging course repositories.</p></li>
+</ul>
+</section>
+<section id="lumi">
+<h2>LUMI<a class="headerlink" href="#lumi" title="Link to this heading"></a></h2>
+<p>LUMI is the new EU cluster with plentyful GPU resources.  A user can
+essentially get as many GPU resources as they need with no waiting,
+but since the GPUs are AMD, there is some initial barrier.  Our
+general feeling remains: “we won’t recommend our users directly go and
+use LUMI, but we recommend they talk with us first and we help them
+use it”.</p>
+<p>Next steps:</p>
+<ul class="simple">
+<li><p>Continue encouraging users to contact us.</p></li>
+<li><p>RSEs will ask the top GPU user each week if they would like support
+with taking LUMI into use.  We’ll go and do all the setup for them.</p></li>
+<li><p>Slide on infoscreens around the buildings?</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+      Previous:
+    
+    <a href="../webp-security-vulnerability/">
+      
+      <span>libwebp security vulnerability and computational scientists</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+      Next: 
+    <a href="../../2024/kickstart-2023-wrap-up/">
+      <span>Kickstart 2023 wrap-up and thoughts for the future</span>
+      
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><h1 style="text-align: center; margin-top: 0px">
+  <a href="../../">Aalto Scientific Computing Blog</a>
+</h1>
+<ul>
+<li><a href="https://scicomp.aalto.fi">Home</a></li>
+<li><a href="../../blog/atom.xml">Blog feed</a></li>
+<li><a href="https://fosstodon.org/@SciCompAalto">Mastodon</a></li>
+<li><a href="https://twitter.com/SciCompAalto">Twitter</a></li>
+</ul>
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <span>2023 Oct 30</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+       Author: 
+    </span>
+     
+    <a href="../../blog/author/richard-darst/">Richard Darst</a>
+      
+  </li>
+     
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+       Category: 
+    </span>
+     
+    <a href="../../blog/category/asc/">ASC</a>
+      
+  </li>
+    
+</div>
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../blog/">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../2025/ucl-rse-visit/">
+        08 May - RSE report from visiting University College London Advanced Research Computing
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/what-is-a-rse/">
+        20 November - What is a Research Software Engineer?
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/how-busy-is-the-cluster/">
+        21 October - How busy is the cluster?  A discussion
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/rse-work-rotations/">
+        08 October - RSE work rotations
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/rse-collaboration/">
+        08 October - Future RSE collaboration in Finland
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../../blog/category/">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/category/ai/">AI (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/asc/">ASC (4)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/aalto/">aalto (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/python/">python (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/rse/">rse (6)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/security/">security (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/software/">software (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/ssh/">ssh (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/teaching/">teaching (2)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/triton/">triton (5)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/whisper/">whisper (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../blog/archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/2025/">2025 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2024/">2024 (8)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2023/">2023 (9)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2021/">2021 (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021-2023, Aalto Scientific Computing.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/2023/dev-day-2023-aug.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

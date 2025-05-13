@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="How busy is the cluster?  A discussion" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aaltoscicomp.github.io/blog/2024/how-busy-is-the-cluster/" />
+<meta property="og:site_name" content="Aalto SciComp Blog" />
+<meta property="og:description" content="We occasionally get some questions: how busy is the cluster? How long do I have to wait? Is there some dashboard that can tell me? The answer is, unfortunately, not so easy. Our cluster uses dynami..." />
+<meta property="og:image" content="https://scicomp.aalto.fi/_static/asc-socialshare-02.png" />
+<meta property="og:image:alt" content="ASC hexagon logo; Aalto Scientific Computing; Data, Software, Computing, HPC, and Training." />
+<meta name="description" content="We occasionally get some questions: how busy is the cluster? How long do I have to wait? Is there some dashboard that can tell me? The answer is, unfortunately, not so easy. Our cluster uses dynami..." />
+<meta property="twitter:creator" content="@SciCompAalto" />
+
+    <title>How busy is the cluster? A discussion &#8212; Aalto Scientific Computing Blog  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script data-domain="aaltoscicomp.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <link rel="icon" href="../../_static/logo-hexagons-02-compact.svg.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Aalto Scientific Computing Blog"
+/>
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             <section id="how-busy-is-the-cluster-a-discussion">
+<h1>How busy is the cluster?  A discussion<a class="headerlink" href="#how-busy-is-the-cluster-a-discussion" title="Link to this heading"></a></h1>
+<p>We occasionally get some questions: how busy is the cluster?  How
+long do I have to wait?  Is there some dashboard that can tell me?</p>
+<p>The answer is, unfortunately, not so easy.  <a class="reference external" href="https://scicomp.aalto.fi/triton/" title="(in Aalto Scientific Computing)"><span class="xref std std-doc">Our cluster</span></a> uses dynamic scheduling with a fairshare algorithm.
+All users have a fairshare priority, which decreases the more you have
+recently run.  Jobs are ranked by priority (including fairshare plus
+other factors), and scheduled in that order.  If there are
+unschedulable holes between those jobs, it can take a job with a lower
+priority and fill them in (“backfilling”).  So that gives us:</p>
+<ul class="simple">
+<li><p>A small-enough job with a low priority might still be scheduled
+soon.</p></li>
+<li><p>A higher priority user could submit something while you are waiting,
+and increase your wait time.</p></li>
+<li><p>An existing job could end early, making other wait times shorter.</p></li>
+<li><p>An existing job could end early, allowing some other higher priority
+jobs to run sooner, making backfilled jobs run later.</p></li>
+</ul>
+<p>In short: there is no way to give an estimate of the wait time, in the
+way people want.  We’ve tried but haven’t find a way to answer the
+question well.</p>
+<p>What can we know?</p>
+<section id="priority-comparison">
+<h2>Priority comparison<a class="headerlink" href="#priority-comparison" title="Link to this heading"></a></h2>
+<p>You can compare your fairshare factor with other users.  If you run
+<code class="docutils literal notranslate"><span class="pre">sshare</span></code> you can see the fairshare (higher means higher priority).
+<code class="docutils literal notranslate"><span class="pre">sprio</span></code> shows relatively priority for all jobs (here, the raw values
+are multiplied by some factor and added).  On Triton (the new install
+since 2024 may), they mean the following:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>The “age” value is “1e4 × (1-(time_in_queue/7day))” (but maxes out</dt><dd><p>at 7 days) (zero when first submitted, increasing to 10000 at 7
+days old)</p>
+</dd>
+</dl>
+</li>
+<li><p>The fairshare factor is “1e7 × FairShare priority from sshare”</p>
+<ul>
+<li><p>The FairShare value is computed based on the raw usage value: at
+each level of the share tree, it divides it up among the users so
+that those who have run less have a higher priority.</p></li>
+<li><p>The usage value decays with a two-week half life.</p></li>
+</ul>
+</li>
+<li><p>The others are mostly constant.</p></li>
+</ul>
+<p>Still: this is all very abstract and what others submit has more
+effect than your priority.  The only thing you can control is using
+less resources.</p>
+<p>This is quite cluster dependent so we’d recommend asking for help for
+how your own cluster is setup.</p>
+</section>
+<section id="how-to-get-jobs-scheduled-sooner">
+<h2>How to get jobs scheduled sooner<a class="headerlink" href="#how-to-get-jobs-scheduled-sooner" title="Link to this heading"></a></h2>
+<p>This may be your real question. There are two main things:</p>
+<ul class="simple">
+<li><p>Use less resources.  <strong>Make sure you don’t over-request more than
+you need (CPU, memory, GPUs)</strong> - this will affect your future
+fairshare less. Of course, use everything you need, “saving for
+later” doesn’t give you more resources than you save now.</p></li>
+<li><p>Request less resources per job.  This will let you be backfilled
+into the scheduling holes (see below).</p></li>
+</ul>
+</section>
+<section id="when-the-cluster-is-mostly-empty">
+<h2>When the cluster is mostly empty<a class="headerlink" href="#when-the-cluster-is-mostly-empty" title="Link to this heading"></a></h2>
+<p>In this case, if there is a slot for you, you are scheduled very soon.
+<code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--test</span> <span class="pre">[RESOURCE_REQUESTS]</span></code> might give you some hint about
+when a job would be scheduled - it basically tries to schedule an
+empty job and reports the currently estimated start time. (It uses a
+JobID though so don’t run it in a loop)</p>
+</section>
+<section id="the-cluster-has-a-long-queue">
+<h2>The cluster has a long queue<a class="headerlink" href="#the-cluster-has-a-long-queue" title="Link to this heading"></a></h2>
+<p>In this case, nothing can be said since the queue is always being
+re-shuffled.  In the long-run, you get a fair share of resources.  If
+you haven’t used much lately, you have more now.  Your wait time
+depends more on what other users submit (and their priorities) than
+what you submit - and this is always changing.  You can tell something
+about how soon you’d be scheduled by looking at your priority relative
+to other users.  Make your jobs as small and efficient as possible to
+fit in between the holes of other jobs and get scheduled as soon as
+possible.  If you can break one big job into smaller pieces (less
+time, less CPU, less memory) that depend on each other, then you can
+better fit in between all of the big jobs.  See the <a class="reference external" href="https://coderefinery.github.io/TTT4HPC_resource_management/scheduling/">Tetris metaphor
+here in TTT4HPC</a></p>
+<p>If your need is “run stuff quickly for testing”, make sure the jobs
+are as short as possible.  Hopefully, your cluster staff about
+development or debugging partitions that may be of use, because that’s
+the solution for quick tests.</p>
+</section>
+<section id="long-older-description">
+<h2>Long, older description<a class="headerlink" href="#long-older-description" title="Link to this heading"></a></h2>
+<p>This description was in an old version of our docs but has since been
+removed.  The exact values are out of date.  It’s included here for
+detailed reference anyway:</p>
+<p>Triton queues are not first-in first-out, but “fairshare”.  This means
+that every person has a priority.  The more you run the lower your
+user priority.  As time passes, your user priority increases again.
+The longer a job waits in the queue, the higher its job priority goes.
+So, in the long run (if everyone is submitting an never-ending stream
+of jobs), everyone will get exactly their share.</p>
+<p>Once there are priorities, then: jobs are scheduled in order of
+priority, then any gaps are backfilled with any smaller jobs that can
+fit in.  So small jobs usually get scheduled fast regardless.</p>
+<p><em>Warning: from this point on, we get more and more technical, if you
+really want to know the details.  Summary at the end.</em></p>
+<p>What’s a share?  Currently shares are based on department and their
+respective funding of Triton (<code class="docutils literal notranslate"><span class="pre">sshare</span></code>).  It used to be that
+departments had a share, and then each member had a share of that
+department.  But for complex reasons we have changed it so that it’s
+flat: so that each person has a share, and the shares of everyone in a
+department corresponds to that department’s share.  When you are below
+your share (relative to everyone else), you have higher priority, and
+vice versa.</p>
+<p>Your priority goes down via the “job billing”: roughly time×power.
+CPUs are billed at 1/s (but older, less powerful CPUs cost less!).
+Memory costs .2/GB/s.  But: you only get billed for the max of memory
+or CPU. So if you use one CPU and all the memory (so that no one else
+can run on it), you get billed for all memory but no CPU.  Same for
+all CPUs and little memory.  This encourages balanced use.  (this also
+applies to GPUs).</p>
+<p>GPUs also have a billing weight, currently tens of times higher than a
+CPU billing weight for the newest GPUs.  (In general all of these can
+change, for the latest info see search <code class="docutils literal notranslate"><span class="pre">BillingWeights</span></code> in
+<code class="docutils literal notranslate"><span class="pre">/etc/slurm/slurm.conf</span></code>).</p>
+<p>If you submit a long job but it ends early, you are only billed for
+the actual time you use (but the longer job might take longer to start
+at the beginning).  Memory is always billed for the full reservation
+even if you use less, since it isn’t shared.</p>
+<p>The “user priority” is actually just a record how much you have
+consumed lately (the billing numbers above).  This number goes down
+with a half-life decay of 2 weeks.  Your personal priority your share
+compared to that, so we get the effect described above: the more you
+(or your department) runs lately, the lower your priority.</p>
+<p>If you want your stuff to run faster, the best way is to more
+accurately specify your time (may make that job can find a place
+sooner) and memory (avoids needlessly wasting your priority).</p>
+<p>While your job is pending in the queue SLURM checks those metrics
+regularly and recalculates job priority constantly.  If you are
+interested in details, take a look at <a class="reference external" href="https://slurm.schedmd.com/priority_multifactor.html">multifactor priority plugin</a> page (general
+info) and <a class="reference external" href="https://slurm.schedmd.com/priority_multifactor3.html">depth-oblivious fair-share factor</a> for what we
+use specifically (warning: very in depth page).  On Triton, you can
+always see the latest billing weights in <code class="docutils literal notranslate"><span class="pre">/etc/slurm/slurm.conf</span></code></p>
+<p>Numerically, job priorities range from 0 to 2^32-1.  Higher is
+sooner to run, but really the number doesn’t mean much itself.</p>
+<p>These commands can show you information about your user and job
+priorities:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">slurm</span> <span class="pre">s</span></code></p></td>
+<td><p>list of jobs per user with their current priorities</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">slurm</span> <span class="pre">full</span></code></p></td>
+<td><p>as above but almost all of the job parameters are listed</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">slurm</span> <span class="pre">shares</span></code></p></td>
+<td><p>displays usage (RawUsage) and current FairShare weights (FairShare, higher is better) values for all users</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sshare</span></code></p></td>
+<td><p>Raw data of the above</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sprio</span></code></p></td>
+<td><p>Raw priority of queued jobs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">slurm</span> <span class="pre">j</span> <span class="pre">&lt;jobid&gt;</span></code></p></td>
+<td><p>shows <code class="docutils literal notranslate"><span class="pre">&lt;jobid&gt;</span></code> detailed info including priority, requested nodes etc.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>tl;dr: Just select the resources you think you need, and Slurm
+tries to balance things out so everyone gets their share.  The best
+way to maintain high priority is to use resources efficiently so you
+don’t need to over-request.</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+      Previous:
+    
+    <a href="../rse-work-rotations/">
+      
+      <span>RSE work rotations</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+      Next: 
+    <a href="../what-is-a-rse/">
+      <span>What is a Research Software Engineer?</span>
+      
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><h1 style="text-align: center; margin-top: 0px">
+  <a href="../../">Aalto Scientific Computing Blog</a>
+</h1>
+<ul>
+<li><a href="https://scicomp.aalto.fi">Home</a></li>
+<li><a href="../../blog/atom.xml">Blog feed</a></li>
+<li><a href="https://fosstodon.org/@SciCompAalto">Mastodon</a></li>
+<li><a href="https://twitter.com/SciCompAalto">Twitter</a></li>
+</ul>
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <span>2024 Oct 21</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+       Author: 
+    </span>
+     
+    <a href="../../blog/author/richard-darst/">Richard Darst</a>
+      
+  </li>
+     
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+       Category: 
+    </span>
+     
+    <a href="../../blog/category/triton/">triton</a>
+      
+  </li>
+    
+</div>
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../blog/">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../2025/ucl-rse-visit/">
+        08 May - RSE report from visiting University College London Advanced Research Computing
+      </a>
+    </li>
+    
+    <li>
+      <a href="../what-is-a-rse/">
+        20 November - What is a Research Software Engineer?
+      </a>
+    </li>
+    
+    <li>
+      <a href="../rse-work-rotations/">
+        08 October - RSE work rotations
+      </a>
+    </li>
+    
+    <li>
+      <a href="../rse-collaboration/">
+        08 October - Future RSE collaboration in Finland
+      </a>
+    </li>
+    
+    <li>
+      <a href="../triton-v3-is-now-default/">
+        06 May - Triton v3 is now default
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../../blog/category/">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/category/ai/">AI (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/asc/">ASC (4)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/aalto/">aalto (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/python/">python (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/rse/">rse (6)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/security/">security (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/software/">software (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/ssh/">ssh (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/teaching/">teaching (2)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/triton/">triton (5)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/whisper/">whisper (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../blog/archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/2025/">2025 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2024/">2024 (8)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2023/">2023 (9)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2021/">2021 (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021-2023, Aalto Scientific Computing.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/2024/how-busy-is-the-cluster.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

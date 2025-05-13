@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posted in 2021 &#8212; Aalto Scientific Computing Blog  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script data-domain="aaltoscicomp.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <link rel="icon" href="../../_static/logo-hexagons-02-compact.svg.ico"/>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Posted in 2021"
+/>
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+             
+<div class="section ablog__collection">
+  <h1>
+    
+    <span
+      >Posted in  2021 
+    </span>
+  </h1>
+   
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
+      <a href="../../2021/04/what-code-has-to-teach-us-1/">What code has to teach us #1: the impact of implicit behavior</a>
+    </h2>
+    <ul class="ablog-archive">
+      <li>
+         
+        <span>2021 Apr 14</span>
+        
+      </li>
+      <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+       Author: 
+    </span>
+     
+    <a href="../author/marijn-van-vliet/">Marijn van Vliet</a>
+      
+  </li>
+     
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+       Category: 
+    </span>
+     
+    <a href="../category/python/">python</a>
+      
+  </li>
+    
+</div>
+    </ul>
+    <p class="ablog-post-excerpt"><p>As Research Software Engineers (RSEs), we read and write a lot of code.
+In this series of blog posts, we are going to share some snippets that taught us important lessons, and thereby impart that wisdom unto you.
+These snippets are taken from actual research code, responsible for producing results that end up in peer-reviewed scientific articles.
+That is to say, results that we should have some confidence in to be correct.
+However, problems have a way of cropping up in the most unexpected places and when they do, there is a chance to learn from them.</p>
+<p>I was in the metro zooming through Lauttasaari when I received an email from my professor that made my heart skip a beat.
+We just submitted a paper to Nature Communications and were all still a little giddy about finally sending off the project we had been working on for 3 years.
+She and the first author had been chatting about the cool methods we had been using for the project and a question arose: were we 100% certain that we “removed copies of the selected stimuli from the train set”?
+If we hadn’t, we would have to quickly pull back our submission, but surely we had, right?
+I thought we did.
+At least, I distinctly remember writing the code to do it.
+Just to be on the safe side, I decided to double check the code.</p>
+<p>Below is the analysis script in question.
+It reads some data, performs some preprocessing, feeds into the a machine learning algorithm called <code class="docutils literal notranslate"><span class="pre">zero_shot_decoding</span></code>, and stores the output.
+I present it here to you in full, because there are many subtleties working together that make this situation so scary.
+The question I pose to you, dear reader, is this: were the highlighted lines (118–120) executed, or did we have to pull our submission?</p>
+<p>The first thing that went through my head, as it probably went through yours, was: this code is so long and complicated, answering this seemingly simple question is going to take some time to figure out.
+And I won’t blame you for giving up right then and there.
+Hunched over my laptop while the metro passed through Ruoholahti, I tried to trace the logic of the script.</p>
+<p>First problem: much of the behavior of the script is dictated by the command line arguments.
+Luckily, their values are saved in the output file, so I could check that they were correct.</p>
+<p><strong>Lesson:</strong> always error on the side of caution when deciding whether it is worth storing something in the result file.</p>
+<p>That brings us to the big <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement.
+Did the correct branch execute?
+Well, that depends on what was in the <code class="docutils literal notranslate"><span class="pre">m</span></code> dictionary, which translates to what variables were defined in the MATLAB file used as input to the script.
+If we had used the wrong variable name, i.e. <code class="docutils literal notranslate"><span class="pre">brainVecsReps</span></code> instead of <code class="docutils literal notranslate"><span class="pre">brainVecs</span></code>, when creating the input file, the wrong branch would have executed and the script would have been happily computing the wrong thing.
+And we would never know.
+If we had used the wrong input file, or the wrong version of the input file, the wrong branch would have executed without any indication that something was wrong.
+So many opportunities for small mistakes to lead to a big error.</p>
+<p><strong>Lesson:</strong> have the user be explicit in what they want to do, so the script can check the user’s intent against the inputs and raise a nice big error if they screwed up.
+In this case, there should really have been either a command line parameter determining which branch to execute, or even better, this should have been four separate scripts.</p>
+<p>In the end I ended up searching the logfile for the line <code class="docutils literal notranslate"><span class="pre">Stability</span> <span class="pre">selection</span> <span class="pre">DISABLED,</span> <span class="pre">single-trial</span> <span class="pre">data</span></code> which, thankfully, was there, so the correct branch did execute.</p>
+<p><strong>Lesson:</strong> be liberal with <code class="docutils literal notranslate"><span class="pre">print</span></code>-statements (or other logging directives) in your scripts; cherish the resulting logfiles.</p>
+<p>I breathed a sigh of relieved as the metro pulled into the central railway station.</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement is a work of insanity.
+What was I thinking determining what the script should be doing based on a mostly random naming scheme of some variables in a MATLAB file?
+I got lucky that time.
+But from that moment on, I would heed this lesson:</p>
+</p>
+
+    <p class="ablog-post-expand">
+      <a href="../../2021/04/what-code-has-to-teach-us-1/"><em>Read more ...</em></a>
+    </p>
+    <hr />
+  </div>
+   
+</div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><h1 style="text-align: center; margin-top: 0px">
+  <a href="../../">Aalto Scientific Computing Blog</a>
+</h1>
+<ul>
+<li><a href="https://scicomp.aalto.fi">Home</a></li>
+<li><a href="../atom.xml">Blog feed</a></li>
+<li><a href="https://fosstodon.org/@SciCompAalto">Mastodon</a></li>
+<li><a href="https://twitter.com/SciCompAalto">Twitter</a></li>
+</ul>
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../2025/ucl-rse-visit/">
+        08 May - RSE report from visiting University College London Advanced Research Computing
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/what-is-a-rse/">
+        20 November - What is a Research Software Engineer?
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/how-busy-is-the-cluster/">
+        21 October - How busy is the cluster?  A discussion
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/rse-work-rotations/">
+        08 October - RSE work rotations
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/rse-collaboration/">
+        08 October - Future RSE collaboration in Finland
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../category/">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../category/ai/">AI (1)</a>
+    </li>
+      
+    <li>
+      <a href="../category/asc/">ASC (4)</a>
+    </li>
+      
+    <li>
+      <a href="../category/aalto/">aalto (1)</a>
+    </li>
+      
+    <li>
+      <a href="../category/python/">python (1)</a>
+    </li>
+      
+    <li>
+      <a href="../category/rse/">rse (6)</a>
+    </li>
+      
+    <li>
+      <a href="../category/security/">security (1)</a>
+    </li>
+      
+    <li>
+      <a href="../category/software/">software (1)</a>
+    </li>
+      
+    <li>
+      <a href="../category/ssh/">ssh (1)</a>
+    </li>
+      
+    <li>
+      <a href="../category/teaching/">teaching (2)</a>
+    </li>
+      
+    <li>
+      <a href="../category/triton/">triton (5)</a>
+    </li>
+      
+    <li>
+      <a href="../category/whisper/">whisper (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../2025/">2025 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../2024/">2024 (8)</a>
+    </li>
+      
+    <li>
+      <a href="../2023/">2023 (9)</a>
+    </li>
+      
+    <li>
+      <a href="#">2021 (1)</a>
+    </li>
+     
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2021-2023, Aalto Scientific Computing.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
