@@ -15,7 +15,7 @@ improving this post.
 About RSE at UCL
 ----------------
 
-The RSE team at UCL (the "Collaborations ) is part of Advanced Research Computing Centre
+The RSE team at UCL ("collaborations and consultancy") is part of Advanced Research Computing Centre
 (`ARC <https://www.ucl.ac.uk/advanced-research-computing/>`__), which is a
 department-level organization within the university.  Like Science-IT
 at Aalto, it is not part of their IT Services, but also not part an
