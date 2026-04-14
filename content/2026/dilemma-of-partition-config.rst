@@ -60,7 +60,7 @@ Problem: All GPUs are full until X days from now
 -------------------------------------------------
 
 Situation: one user has a lot of GPUs in use.  I know I can wait for
-them to finish, but they are last many days.  Do I really have to wait
+them to finish, but they last many days.  Do I really have to wait
 X days before I can get stuff started?
 
 Sometimes, if the cluster is free, a user can submit many long jobs.
@@ -72,12 +72,8 @@ running, jobs turn over frequently enough that people can get some
 resources quickly (and the heavy users have lower priority at the
 time, so the more recent users have priority for free slots).
 
-This situation is unfortunate, but it's a bit harder.  When the
-cluster is under heavy use (the usual), there are always jobs starting
-and stopping, so it's hard for one person to occupy the cluster with
-many long jobs all ending at the same time many days away.
-
-In this case, we usually just let the situation wait, and once we get
+In this case, we usually wait and just let the situation develop, and
+once we get
 to a "steady state fullness" jobs cycle fast enough it's not usual for
 the cluster to get to this state.  There aren't that many free GPUs
 opening up all at once without multiple users queuing, so it can't get
