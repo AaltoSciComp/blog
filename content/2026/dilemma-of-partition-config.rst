@@ -1,11 +1,11 @@
 :blogpost: true
-:date: 2026-04-10
+:date: 2026-04-16
 :author: Richard Darst
 :category:
 
 
 The dilemma of setting Slurm parameters
-==================================================
+=======================================
 
 Sometimes people come to us and complain that there are idle cluster
 GPUs, and they could be used if there wasn't a per-user limit on max
@@ -22,6 +22,9 @@ We are very aware of this and try to enable as much overall research
 as possible.  Still, there are choices to be made, and in this post we
 will try to describe them, so that our users can better give feedback
 for how we should adjust things.
+
+We wrote this post so users can understand what's going on in the
+background and let us know when something seems wrong.
 
 
 Broad picture
