@@ -150,6 +150,13 @@ literacy in computing, data, and problem solving.
 Note: this blog post was written with zero "AI" content generation.
 
 
+See also
+--------
+
+* `Fundamentals of secure AI systems with personal data -> What is
+  artificial intelligence? <https://fundamentals-of-secure-ai-systems-with-personal-data-9cd9e2.pages.code.europa.eu/ch1.html#what-is-artificial-intelligence>`__
+
+
 Appendix: Types of "AI" projects that Aalto RSE has done or heard about
 -----------------------------------------------------------------------
 
