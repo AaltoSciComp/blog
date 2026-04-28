@@ -184,7 +184,9 @@ You certainly can benefit from "AI" without knowing all the details.
 It's very hard to benefit from it without knowing your goal without
 "AI".
 
-Note: this blog post was written with zero "AI" content generation.
+*Note: this blog post was written with zero "AI" content generation.
+My anonymous colleague has contributed some of the key ideas and
+title.*
 
 
 Definitions
