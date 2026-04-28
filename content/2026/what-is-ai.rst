@@ -15,15 +15,16 @@ is.  Let’s discuss.
 
 For us research engineers, a "real AI" project might mean "writing
 Python code and optimizing deep learning training using a large
-computer cluster".  Others may think it's asking a question to the
-ChatGPT website.  We get anything between these: using an existing
-model, to using a commercial language model via an API, to writing web
-visualizations for data related to "AI", to setting up student
-platforms with Kubernetes to use "AI", to advising on using chatbots.
+computer cluster" or "does a Mixture of Experts-model produce better
+accuracy compared to a traditional feed-forward network in my use
+case?".  In practice, "AI" questions to us have included:
 
-In the end, "AI" is such an overloaded term that it can mean anything.
-To better ask for help with "AI", it’s good to be able to think in a
-bit more detail what it is you need.
+* Problems with web APIs
+* Problems with PyTorch
+* Problems with HPC libraries
+* Problems with laws and regulations
+* Problems with web servers
+* Problems with Python installations
 
 I think the effect of "AI" is to reduce the effort needed to use
 computing tools, so the amount of computing people want to do increases.
@@ -32,13 +33,21 @@ get, even if the projects aren’t exactly deep learning training. Thus
 the increased need for our team and a general increase in computing
 and data literacy.
 
+In the end, "AI" is such an overloaded term that it can mean anything.
+To better ask for help with "AI", it’s good to be able to decipher it
+down to the actual topic.  This post isn't about scientific computing
+general, so let's look deeper below at what the core "AI" use cases
+are:
+
 
 Types of AI
 -----------
 
-This blog post evolved out of talk at NoBSC 2026, where the issue of
-"AI" meaning anything. In that talk, we thought of two broad
-categories:
+This blog post evolved out of a colleague's talk at `NoBSC 2026
+<https://aaltoscicomp.github.io/NoBSC/>`__, where they pointed the
+issue that "AI" can mean anything, thus it isn't a good to speak of
+"AI" projects without further clarification.  In that talk, we thought
+of two broad categories for the actual uses of "AI":
 
 "AI" can mean pattern matching and decision making. In this, you have
 some input data and predict some output based on that.
