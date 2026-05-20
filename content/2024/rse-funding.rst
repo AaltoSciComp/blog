@@ -70,7 +70,7 @@ with Finance.  As for as external funders are concerned, our staff
 count as researchers, so we can use any funding you might have.
 
 **If you think you have a project or want us on retainer, let us
-know:** :external:doc:`rse/index` or :external:doc:`rse/how-we-work`.
+know:** :external:doc:`rse/index` or :external:doc:`rse/for-researchers`.
 
 
 
