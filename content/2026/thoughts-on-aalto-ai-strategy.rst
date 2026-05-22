@@ -7,8 +7,8 @@
 Thoughts on a practical AI strategy in research
 ===============================================
 
-Much has been said about AI strategies to increase AI adoption in higher education institutions.  Yet, as our
-:doc:`last post </2026/what-is-ai>` talked about, since AI can be
+Much has been said about "AI strategies": increase AI development and adoption in higher education institutions. 
+Yet, as our :doc:`last post </2026/what-is-ai>` discussed, since AI can be
 anything, it's hard to write a useful strategy.  This post is about
 what we, Aalto Scientific Computing / ASC, think should be considered
 in such a strategy in research.
@@ -19,37 +19,38 @@ background.
 
 .. admonition:: General steps for AI strategy in research
 
-   * Support AI development and adoptions from core methods to stand alone AI tools
+   * Support AI development and adoption from core methods to standalone AI tools
    * Minimize the use of the generic term "AI".
      Be specific about intention in communication.
-   * Providing computing and machine learning specialists who can advise
+   * Providw computing and machine learning specialists who can advise
      on "what AI means" and how to actually incorporate it into
      projects (beyond chatbots).
-   * Lowering the barrier to test open source AI tools in researchers' workflow
+   * Lower the barrier to testing open-source AI tools in researchers' workflow
 
 
-If we consider an AI system as a layered structure, we can enable the development and adoption of i) new AI methods, ii) AI components and platforms that turn the methods into building blocks for applications, iii) AI tools that connect the components with interfaces and workflows used by researchers
+We can think of an AI system as a layered structure. THis helps ussupport the development and adoption of i) new AI methods and AI models, ii) AI components and platforms that turn the methods into building blocks for applications, iii) AI tools that connect the components to the interfaces and workflows used by researchers
 
-Developing AI methods
----------------------
+Developing AI methods and AI models
+-----------------------------------
 
-Researchers develop new AI methods, often in the field of machine learning. This is the groundwork
+Researchers develop new AI methods and AI models, often in the field of machine learning. This is the groundwork
 needed for platforms and tools of the future, and is probably what is
 meant by "being an AI leader".  The revolution isn't just replacing
 human work by automation, but being able to see patterns in new
 fields.
 
-Method development can be the core computer science-y stuff, where you are really
-developing a new machine learning method. Or by using ML methods in various fields of research, researchers can develope new ways of looking at research data.  Real magic can happen when these two halves work together.
+Method/model development can be the core computer science-y stuff, where you are really
+developing a new machine learning method. Or by using ML methods/models in various fields of research, 
+researchers can develop new ways of looking at research data.  Real magic can happen when these two halves work together.
 
 .. admonition:: Steps for developing AI methods
 
    * Good computational resources for development, both powerful and
      with good user interfaces for people who aren't computer
      scientists or physicists.
-   * Computing support, who can help guide researchers from diverse
-     fields to the right {AI methods, computing resources, software
-     frameworks}.
+   * Computing support staff, who can help guide researchers from diverse
+     fields to the right AI methods/model, computing resources, and software
+     frameworks.
    * Research software engineering support for those applying AI to
      new fields.
 
@@ -61,18 +62,18 @@ developing a new machine learning method. Or by using ML methods in various fiel
 Developing AI components
 ------------------------
 
-Core ML learning methods can be difficult to integrate in applications: if one researcher is planning to use a local large language model interactively, it would be inefficient to reserve large amount of computational resources just for the single user. Developing AI components is the key here to enable the adoption of AI methods. 
+Core machine-learning methods can be difficult to integrate in applications: if one researcher is planning to use a local large language model interactively, it would be inefficient to reserve a large amount of computational resources just for a single user. Developing AI components is the key here to enable the adoption of AI methods. 
 
 AI components can be proprietary or open source. For example in the case of large language models:
 
-a) purchased AI inference with proprietary models in the cloud (usage cost but no
-   capital cost), versus
-b) local AI inferece with open-weight models (capital cost but
-   no subscription cost).
+a) purchased AI inference with proprietary models in the cloud (usage costs but no
+   capital costs), versus
+b) local AI inferece with open-weight models (capital costs but
+   no usage costs).
 
-Developing our own AI platforms has the advantage of providing more local
+Developing our own AI platforms has the advantage of providing greater local
 sovereignty: data and decision-making are fully within our
-control. Services can be more easily transferred from (a) to (b) scenarios in the future
+control. Services can be more easily transferred from scenario (a) to scenario (b) in the future
 to control costs and sovereignty, as needed.
 
 .. admonition:: Steps for developing AI platforms
@@ -95,7 +96,7 @@ There are many popular proprietary tools which embed an AI component and they al
 Do we want to buy all the latest AI tools to generate content or automate operations? (probably wrapped in
 proprietary logic?). These tools definitely have some use, still, for this, we are a follower and paying others for the privilege. 
 
-While it is important to test and use the state of the art proprietary AI tools, an ecosystem of open source tools with a local AI components has merged and it is part of our strategy to support it. You can code using Claude code and pay real money for tokens (and live with the risk of loss of confidentiality), or use a local LLM endpoint which can perform as well as the proprietary one.
+While it is important to test and use the state of the art proprietary AI tools, an ecosystem of open source tools with a local AI components has merged and it is part of our strategy to support it. You can code using Claude Code and pay real money for tokens (and live with the risk of loss of confidentiality), or use a local LLM endpoint which can perform as well as a proprietary alternative.
 
 .. admonition:: Steps for adopting existing AI tools
 
@@ -105,10 +106,10 @@ While it is important to test and use the state of the art proprietary AI tools,
      but a follower of the followers.
    * The strategy should contain plan for future cost increases of AI tools, including
      possibility of moving to open source alternatives where appropriate.
-   * The barrier to use open source AI tools should be as low as possible to ensure more transparency   
-     and always maintain the confidentiality of the usage of the tool
-   * AI literacy and competence to know the limitations of these tools: from the opaque logic of the proprietary tools, the potential
-     loss of confidentiality, and the new risks introduced that can erode research integrity and research compliance.
+   * The barrier to using open source AI tools should be as low as possible to ensure  transparency   
+     and maintain the confidentiality of tool use
+   * AI literacy and competence are needed to understand the limitations of these tools: the opaque logic of the proprietary tools, the potential
+     loss of confidentiality, and the new risks introduced that can erode research integrity and compliance.
    
 
 
@@ -120,30 +121,30 @@ While it is important to test and use the state of the art proprietary AI tools,
 
 
      +------------------------------------------------------------------+
-     | LEVEL 1: DEVELOPING AI METHODS                                    |
+     | LEVEL 1: DEVELOPING AI METHODS & AI MODELS                       |
      |                                                                  |
-     |  core ML groundwork -> new methods -> patterns in new fields      |
+     |  core ML groundwork -> new methods/models -> novel research      |
      |                                                                  |
-     |  Support: computing resources, RSEs, ML specialists               |
+     |  Support: computing resources, RSEs, ML specialists              |
      +-------------------------------+----------------------------------+
                                      |
                                      v
      +------------------------------------------------------------------+
-     | LEVEL 2: DEVELOPING AI COMPONENTS AND PLATFORMS                   |
+     | LEVEL 2: DEVELOPING AI COMPONENTS AND PLATFORMS                  |
      |                                                                  |
-     |  methods -> reusable blocks -> shared services                    |
+     |  methods/models -> reusable blocks -> shared services            |
      |                                                                  |
-     |  Choices: cloud inference or local open models                    |
-     |  Aim: sovereignty, scalability, rapid deployment                  |
+     |  Choices: cloud vs local, proprietary vs open models             |
+     |  Aim: sovereignty, scalability, rapid deployment                 |
      +-------------------------------+----------------------------------+
                                      |
                                      v
      +------------------------------------------------------------------+
-     | LEVEL 3: USING EXISTING AI TOOLS                                  |
+     | LEVEL 3: USING AI TOOLS                                          |
      |                                                                  |
-     |  tools -> workflows -> adoption                                   |
+     |  tools -> workflows -> adoption                                  |
      |                                                                  |
-     |  Needs: AI literacy, risk review, open source options             |
+     |  Needs: AI literacy, risk review, open source options            |
      +------------------------------------------------------------------+
 
 
