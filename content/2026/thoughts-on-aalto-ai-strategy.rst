@@ -17,6 +17,15 @@ Read :doc:`last post </2026/what-is-ai>` if you want some
 background.
 
 
+.. admonition:: General steps for AI strategy
+
+   * Minimize the use of the term "AI" except for branding purposes.
+     Be specific about intention in communication.
+   * Providing computing and deep learning specialists who can advise
+     on "what AI means" and how to actually incorporate it into
+     projects (beyond chatbots).
+
+
 Consumer of AI tools
 --------------------
 
@@ -30,42 +39,52 @@ that generate content (writing, code, images, etc).  Still, for this,
 we are a follower and paying others for the privledge.
 
 
-.. admonition:: Steps for consuming AI tools
+.. admonition:: Steps for consuming existing AI tools
 
    * Any AI strategy should consider under what conditions, and with what
-     budget, for buying outside tools.
+     budget, for buying outside tools.  A plan for future cost
+     increases of AI tools.
    * If this is part of the strategy, there should be a way to do these
      procurements rapidly, otherwise we are not only a follower, but a
      follower of the followers.
-   * Training in using AI tools responsibility.
-   * Support for advanced use (especially for coding), when AI tools
-     lead to confusion which users can not solve themselves.
+   * Training with emphasis that "AI" is prediction and not "actual
+     intelligence".
+   * Support for advanced use (especially for coding), when AI code
+     generation leads to problems which users can not solve
+     themselves.
 
 
 Developing platforms
 --------------------
 
-In addition to procuring tools, they can be internally developed.  We
-can take various bases (purchased AI inference in the cloud, or
-open-weight models which we can run locally), and build our own custom
-platforms (optimized for our own use).
+In addition to procuring tools, we can internally build our own
+platforms optimized for our own internal use as tools.  We can take
+various bases:
+
+a) purchased AI inference in the cloud (subscription cost but no
+   capital cost), and
+b) open-weight models which we can run fully locally (capital cost but
+   no subscription cost)
 
 This has advantages of providing more local sovereignty: they can be
-run fully on-premises (no outside dependence or subscription costs).
-If it's built on a cloud AI inference, at least the raw data is
-sovereign (it can be on-premises), and many of these can be
-theoretically transferred to run on-premises at a later time.
+run fully on-premises and with locally-hosted data.  Services can be
+more easily transferred from (a) to (b) in the future to control costs
+and sovereignty, as needed.
 
 .. admonition:: Steps for developing AI platforms
 
    * A local development process which can rapidly iterate and deploy
      platforms before they become obsolete.  (Current small-scale
-     development rules are far too slow)
+     development rules are far too slow.)
    * Investment in the hardware, data, and human resources needed to do
      this development.  Prepare for a future where cloud AI inference
      prices increase and it becomes necessary to move some work to
      local hardware.
-   * Training in how to think about both using and developing AI tools.
+   * Support in how to think about both using and developing AI tools,
+     instead of being a consumer.
+
+   Implementation: Drastic reform the small-scale development process
+   and broaden Research Software Engineer support to more departments.
 
 
 Developing AI methods
@@ -88,11 +107,17 @@ these two halves work together.
 .. admonition:: Steps for developing AI methods
 
    * Good computational resources for development, both powerful and
-     usable by people who aren't computer scientists or physicists.
+     with good user interfaces for people who aren't computer
+     scientists or physicists.
    * Computing support, who can help guide researchers from diverse
-     fields to the right {AI methods, computing resources, }
+     fields to the right {AI methods, computing resources, software
+     frameworks}.
    * Research software engineering support for those applying AI to
      new fields.
+
+   Implementation: focus on Aalto's Triton resource (designed for more
+   usability across broad fields) and Aalto Research Software
+   Engineers (which helps with Triton *and* other platforms).
 
 
 A metaphor
