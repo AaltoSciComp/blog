@@ -36,19 +36,19 @@ proprietary logic?).
 
 These tools definitely have some use, given the huge amount of tools
 that generate content (writing, code, images, etc).  Still, for this,
-we are a follower and paying others for the privledge.
-
+we are a follower and paying others for the privilege.
 
 .. admonition:: Steps for consuming existing AI tools
 
-   * Any AI strategy should consider under what conditions, and with what
-     budget, for buying outside tools.  A plan for future cost
-     increases of AI tools.
-   * If this is part of the strategy, there should be a way to do these
-     procurements rapidly, otherwise we are not only a follower, but a
-     follower of the followers.
+   * Any AI strategy should consider under what conditions, and with
+     what budget, for buying outside tools.
+   * A plan for future cost increases of AI tools, including
+     possibility of moving to local resources where appropriate.
+   * If this is part of the strategy, there should be a way to do
+     these procurements rapidly, otherwise we are not only a follower,
+     but a follower of the followers.
    * Training with emphasis that "AI" is prediction and not "actual
-     intelligence".
+     intelligence" with decisions made opaquely by the provider.
    * Support for advanced use (especially for coding), when AI code
      generation leads to problems which users can not solve
      themselves.
@@ -64,12 +64,13 @@ various bases:
 a) purchased AI inference in the cloud (subscription cost but no
    capital cost), and
 b) open-weight models which we can run fully locally (capital cost but
-   no subscription cost)
+   no subscription cost).
 
-This has advantages of providing more local sovereignty: they can be
-run fully on-premises and with locally-hosted data.  Services can be
-more easily transferred from (a) to (b) in the future to control costs
-and sovereignty, as needed.
+Developing our own platforms has the advantage of providing more local
+sovereignty: they have more data and decision-making fully within our
+control, including the possibly of running fully on-premises.
+Services can be more easily transferred from (a) to (b) in the future
+to control costs and sovereignty, as needed.
 
 .. admonition:: Steps for developing AI platforms
 
@@ -80,6 +81,10 @@ and sovereignty, as needed.
      this development.  Prepare for a future where cloud AI inference
      prices increase and it becomes necessary to move some work to
      local hardware.
+   * A clear understanding of the AI act and the difference between
+     something using AI under command of a human and a AI system
+     (which is autonomously making decisions and affecting the
+     environment).
    * Support in how to think about both using and developing AI tools,
      instead of being a consumer.
 
@@ -90,19 +95,19 @@ and sovereignty, as needed.
 Developing AI methods
 ---------------------
 
-Finally, we develop new AI methods: either AI methods, or applying AI
-methods to new fields.  This is the groundwork needed for platforms
-and tools of the future, and is probably what people think about for
-"the world being revolutionized with AI".  The revolution isn't just
-replacing human work by generated content, but being able to see
-patterns in new fields.
+Finally, we develop new AI methods: either deep learning methods, or
+applying deep learning methods to new fields.  This is the groundwork
+needed for platforms and tools of the future, and is probably what is
+meant by "being an AI leader".  The revolution isn't just replacing
+human work by generated content, but being able to see patterns in new
+fields.
 
 Method develop can be computer science-y stuff, where you are really
-developing a new method (probably for some application but the method
-is the deep learning).  Or it can be someone in another field,
-developing a new method in their field using AI (where the primary
-purpose is to support the other field).  Real magic can happen when
-these two halves work together.
+developing a new method (probably for some application but the novel
+result is the deep learning).  Or it can be for another field,
+developing a new method in their field using AI (where the novel
+result is in the other field).  Real magic can happen when these two
+halves work together.
 
 .. admonition:: Steps for developing AI methods
 
@@ -118,20 +123,3 @@ these two halves work together.
    Implementation: focus on Aalto's Triton resource (designed for more
    usability across broad fields) and Aalto Research Software
    Engineers (which helps with Triton *and* other platforms).
-
-
-A metaphor
-----------
-
-In :doc:`last post </2026/what-is-ai>`, we proposed a metaphor of
-"when cars became mass produced and more reliable, there was more
-driving.  While people had to know less about maintaining cars, but
-more people had to know how to drive and work around cars."  In this
-metaphor, transportation became cheaper and more powerful (yet we
-still definitely don't want cities designed just for cars).
-
-Our goal is not more AI ("cars").  Our goal is cheaper and better
-transportation (actually useful tools, and computational methods).
-Don't think of ways to use AI.  Think of all the expanded computation,
-more rapid prediction and decisions, and (if you want...) content
-generation that is possible.
