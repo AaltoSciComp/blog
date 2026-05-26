@@ -22,13 +22,13 @@ background.
    * Support AI development and adoption from core methods to standalone AI tools
    * Minimize the use of the generic term "AI".
      Be specific about intention in communication.
-   * Providw computing and machine learning specialists who can advise
+   * Provide computing and machine learning specialists who can advise
      on "what AI means" and how to actually incorporate it into
      projects (beyond chatbots).
    * Lower the barrier to testing open-source AI tools in researchers' workflow
 
 
-We can think of an AI system as a layered structure. THis helps ussupport the development and adoption of i) new AI methods and AI models, ii) AI components and platforms that turn the methods into building blocks for applications, iii) AI tools that connect the components to the interfaces and workflows used by researchers
+We can think of an AI system as a layered structure. This helps us support the development and adoption of i) new AI methods and AI models, ii) AI components and platforms that turn the methods into building blocks for applications, iii) AI tools that connect the components to the interfaces and workflows used by researchers
 
 Developing AI methods and AI models
 -----------------------------------
@@ -68,7 +68,7 @@ AI components can be proprietary or open source. For example in the case of larg
 
 a) purchased AI inference with proprietary models in the cloud (usage costs but no
    capital costs), versus
-b) local AI inferece with open-weight models (capital costs but
+b) local AI inference with open-weight models (capital costs but
    no usage costs).
 
 Developing our own AI platforms has the advantage of providing greater local
