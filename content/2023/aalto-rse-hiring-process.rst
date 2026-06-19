@@ -74,7 +74,7 @@ adaptable, and will have a very good chance.
 
 We have adopted some system of anonymous recruiting.  We request that
 cover letters are submitted without identifying information (name,
-signature, etc) so that one person gives them numbers, and a broader
+signature, etc.) so that one person gives them numbers, and a broader
 group tries to take a non-biased look at them.  After this initial
 impression, we bring in the rest of the application.  Don't make
 assumptions about what the reader will know about your background,
@@ -101,7 +101,7 @@ hard to read and all look pretty similar.  To be honest, we don't
 worry that much about the format and contents here: get us basic
 factual information in the most efficient way.  For our particular
 jobs, non-academic skills such as software/data tools are more
-important than scientific articles, etc.   Remember, we are busy
+important than scientific articles, etc.  Remember, we are busy
 and have plenty of applications, make it easy to read.
 
 Open Science isn't just good for research, it's good for you, too.  If
@@ -148,7 +148,7 @@ filtering includes:
   (helping the research process) instead of only focusing on academic
   promotion?
 
-The recruitment team makes several passes over and we discuss how to
+The recruitment team makes several passes over, and we discuss how to
 filter down.  We try to get a good variety of candidates.
 
 
@@ -158,7 +158,7 @@ Interviews
 Sometimes, there is some initial recorded "video interviews", which
 provide some initial familiarity in both directions before the actual
 interviews.  We know these are non-interactive and a recording isn't a
-conversation so this is harder than an interview, but we consider that
+conversation, so this is harder than an interview, but we consider that
 when watching them.  One shouldn't worry too much about these, if we
 do them.
 
@@ -233,7 +233,7 @@ version soon)
    training. Our team consists of a core of PhD staff working with top
    researchers throughout the university. Our services are used by every
    school at Aalto University and known throughout Finland and the Nordics.
-   All our work is open-source by default and we take an active part in
+   All our work is open-source by default, and we take an active part in
    worldwide projects.
 
    **In this position, you will:**
@@ -260,7 +260,7 @@ version soon)
 
    -  Software developer or computational scientist with a strong
       software/open source/Linux background, scientific computing
-      experience, and some experience in research. Masters degree or
+      experience, and some experience in research. Master's degree or
       similar experience.
 
    **This particular call emphasizes the ability to work in machine
